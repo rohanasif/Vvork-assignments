@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9c1668d95b.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .nav{
+        position:relative;
+        height:12%;
+        width:100%;
+        background-color: #fff;
+        /* border: 1px solid #000; */
+        float: left;
+        z-index:2;
+    }
+    .nav .img{
+        margin-left:120px;
+        margin-top:15px
+    }
+    .ul{
+        margin-left: 400px;
+        height:60px;
+        MARGIN-TOP:-60PX;
+        /* border: 1px solid red; */
+    }
+    .ul> .li:nth-child(1){
+        border-bottom:3px solid orange;
+        color:orange
+    }
+    .li{
+        position:relative;
+        /* border: 1px solid #000; */
+        float:left;
+        LEFT:200PX;
+        padding:20PX 20PX;
+        list-style:none;
+    }
+    .li:hover{
+        border-bottom:3px solid orange;
+        cursor: pointer;
+        color:orange;
+    }
+
+    .sec1{
+        position:relative;
+        height:120vh;
+        width:100%;
+        background-image: linear-gradient(rgba(230, 81, 0, 0.25),rgba(230, 81, 0, 0.25)),url(./images/slider-01.jpg);
+        background-size: 100% 100%;
+        top:20px;
+        overflow: hidden;
+    }
+    .sec1>h1{
+        padding-top:100px;
+        padding-left:180px;
+        font-family:"Josefin Sans", sans-serif;
+        color:white;
+        font-size:35px;
+        font-weight: 400;
+    }
+    .sec1>p{
+        padding-left:180px;
+        padding-top:30px;
+        font-size:22px;
+        color:white;
+        font-family:"Josefin Sans", sans-serif;
+        line-height: 35px;
+        letter-spacing:2px;
+        font-weight: 100;
+    }
+    .button1{
+        position: relative;
+        padding:20px 40px;
+        top:70px;
+        left:240px;
+        background:rgb(81, 78, 78);
+        border:0;
+        box-sizing: border-box;
+        font-size:18px;
+        z-index:2;
+        color:white
+    }
+    .button1::after{
+        content:"";
+        position: absolute;
+        height:60px;
+        background-color:orangered;
+        width:0%;
+        top:0px;
+        left:0px;
+        color:white;
+        transition-duration:2s;
+        transition-duration:.5s;
+        z-index:-2;  
+    }
+    .button1:hover::after{
+        width:100%;
+       transition-duration:.5s;
+    }
+    .button1:hover{
+        cursor:pointer;
+        color:white;
+    }
+
+    .button2{
+        position: relative;
+        padding:20px 40px;
+        top:70px;
+        left:300px;
+        background:rgb(81, 78, 78);
+        border:0;
+        font-size:18px;
+        color:white;
+        z-index:2;
+    }
+    .button2::before{
+        content:"";
+        position: absolute;
+        height:100%;
+        width:0%;
+        top:0px;
+        right:0px;
+        transition-duration:.5s;
+        z-index:-2;
+    }
+    .button2:hover::before{
+        background-color:orangered;
+        width:100%;
+        transition-duration:.5s;
+    }
+    .button2:hover{
+        cursor:pointer;
+    }
+
+   .sec1 .img{
+    position: absolute;
+    height:70%;
+    width:15%;
+    /* border: 1px solid #000; */
+    right:330px;
+    top:140px
+   }
+   .sec1 .img>img{
+    position:absolute;
+    height:500px;
+    width:200%;
+    right:-120px;
+   }
+   .sec1 .btn{
+    position: relative;
+    background:transparent;
+    border:0px;
+    padding:10px 12px;
+    top:430px;
+    left:180px;
+    font-size:15px;
+    color:white
+   }
+   .sec1 .btn:hover{
+    cursor: pointer;
+    background-color:rgb(0, 0, 0);
+    /* opacity:; */
+   }
+
+   .sec2{
+    position:relative;
+    height:170vh;
+    width:100%;
+    /* background-color:lightgray;x  */
+    top:85px
+   }
+   .h1{
+    text-align: center;
+    padding-top:80px;
+    box-sizing: border-box;
+    font-size:45px;
+    font-family:"Josefin Sans", sans-serif;
+   }
+   .pg{
+    text-align: center;
+    padding-top:30px;
+    color:#999;
+    font-size:18px;
+    line-height: 32px;
+    font-family: "Josefin Sans", sans-serif;
+   }
+   .sec2 .part1{
+    position:absolute;
+    height:37%;
+    width:100%;
+    /* border: 1px solid #000; */
+    margin-top:53px;
+   }
+   .sec2 .div1{
+    height:100%;
+    width:45%;
+    /* border:1px solid red; */
+    margin-left:100px
+   }
+   .sec2 .div2{
+    position:absolute;
+    height:100%;
+    width:43%;
+    /* border: 1px solid blue; */
+    right:0px;
+    top:0px
+   }
+   .sec2 h2{
+    font-weight: 100;
+    font-family: "Josefin Sans", sans-serif ;
+    padding-top:40px;
+    padding-left: 50px;
+    letter-spacing:2px;
+   }
+   .sec2 h2::first-letter{
+    font-size:35px
+   }
+   .sec2 .p{
+    padding-top:20px;
+    line-height:25px;
+    padding-left:50px;
+    color:#999;
+   }
+
+   .sec2 .part2{
+    position:absolute;
+    height:37%;
+    width:100%;
+    /* border: 1px solid #000; */
+    margin-top:425px
+   }
+
+
+  .sec3{
+     position: relative;
+     height:150vh;
+     width:100%;
+     background-color: #f2f3f5;
+     top:95px
+   }
+   .sec3 .cards{
+    position: relative;
+    height:72%;
+    width: 85%;
+    top:10px;
+    left:115px;
+    /* border: 1px solid #000; */
+   }
+
+   .cards .card1{
+    position: relative;
+    height: 48%;
+    width:32%;
+    background-color:white;
+    /* border: 1px solid #000; */
+    float: left;
+    margin-left:12px;
+    margin-top:13px;
+    /* padding-left:50px; */
+    box-sizing: border-box;
+    transition-duration: 0.2;
+   }
+   .card1 .div{
+    position: absolute;
+    height:25%;
+    width:25%;
+    background-color:orangered;
+    left:30px;
+    top:20px;
+    border:10px solid brown;
+   }    
+   .card1 .div .icon{
+    margin-left:22px;
+    margin-top:20px;
+    color: #fff;
+    font-size: 40px;
+   }
+   .card1:hover .div{
+    border:10px solid orangered;
+    transition-duration:0.2s;
+   }
+   .cards h2{
+    padding-top: 160px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 100;
+    padding-left: 22px;
+   }
+   .cards p{
+    padding-top:20px;
+    line-height:27px;
+    padding-left:22px;
+    color:#999;
+   }
+
+   .sec4{
+    position: relative;
+    height: 50vh;
+    width:100%;
+    background: rgb(44, 43, 43);
+    top:115px
+   }
+   .sec4 .card{
+    position: relative;
+    height:100%;
+    width:24.80%;
+    /* border: 1px solid red; */
+    float:left;
+   }
+   .sec4 .card>h1{
+    text-align: center;
+    padding-top:40px;
+    font-family:"Josefin Sans", sans-serif;
+    color:white
+   }
+   .sec4 .card>h2{
+    text-align: center;
+    padding-top:30px;
+    font-family:"Josefin Sans", sans-serif;
+    color:white;
+    font-weight: 100;
+   }
+   .sec4 .card>p{
+    text-align: center;
+    padding-top:30px;
+    font-family:"Josefin Sans", sans-serif;
+    color:white;
+    /* font-weight: 100; */
+    line-height: 30px;
+   }
+   .sec4 .card:hover{
+    background-color:orangered;
+   }
+
+
+   .sec5{
+    position: relative;
+    height:140vh;
+    width:100%;
+    /* background-color:lightpink; */
+    top:120px
+   }
+   .sec5 .div{
+    position: absolute;
+    height:74%;
+    width:80%;
+    left: 130px;
+    /* border: 1px solid #000; */
+   }
+   .sec5 .div .img1{
+    height:85%;
+    width:30%;
+    margin-top:-10px;
+    transform: skewY(12deg);
+   }
+   .sec5 .img2{
+    height:85%;
+    width:30%;
+    margin-top:60px;
+    margin-left:40px;
+    border-radius: 40px;
+   }
+   .sec5 .div .img3{
+    height:85%;
+    width:30%;
+    transform:skewY(-12deg);
+    margin-left: 40px;
+   }
+
+
+   .sec6{
+    position:relative;
+    height:88vh;
+    width:100%;
+    /* border: 1px solid #000; */
+    top:180px;
+    background-image: linear-gradient( rgba(230, 81, 0, 0.6), rgba(230, 81, 0, 0.6) ),url(./images/d-bg.jpg);
+    background-size: 100% 100%;
+   }
+   .sec6 h1{
+    font-family:"Josefin Sans",sans-serif ;
+    color:white;
+    padding-left:100px;
+    padding-top:130px;
+    font-size: 42px;
+   }
+   .sec6 p{
+    font-family:"Josefin Sans",sans-serif ;
+    color:white;
+    padding-left:100px;
+    padding-top:50px; 
+    line-height: 30px;
+   }
+   .sec6 img{
+    height:80%;
+    width:40%;
+    float: right;
+    margin-right:100px;
+    margin-top:-300px
+   }
+
+
+   .sec7{
+    position: relative;
+    height:22vh;
+    width:100%;
+    /* border: 1px solid #000; */
+    top:180px
+   }
+   .sec7 .div{
+    position: relative;
+    height:100%;
+    width:16%;
+    background: rgb(44, 43, 43);
+    float: left;
+    left:350px;
+    margin-left:10px
+   }
+   .sec7 .div:hover {
+    background-color:orangered;
+    transition-duration: 1s;
+   }
+   .sec7 .div h4{
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    padding-top:20px;
+    font-family:"Josefin Sans",sans-serif ;
+   }
+   .sec7 .div h2{
+    text-align: center;
+    color:white;
+    font-family:"Josefin Sans",sans-serif ;
+    padding-top:15px
+   }
+
+
+   .dev{
+    position:relative;
+    height:130vh;
+    width:100%;
+    /* border: 1px solid #000; */
+    top:250px
+   }
+   .dev .card{
+    position: absolute;
+    height:65%;
+    width:90%;
+    /* border: 1px solid red; */
+    top:260px;
+    left:80px
+   }
+   .card .card01{
+    position: relative;
+    height:100%;
+    width:30%;
+    /* border: 1px solid #000; */
+    float: left;
+    margin-left:30px
+   }
+   .card .card01 .img{
+    height:65%;
+    width:100%;
+    background-image: url(./images/team_01.jpg);
+    background-size: 100% 100%;
+    /* border: 1px solid blue; */
+   }
+   .card .card01 .img2{
+    background-image: url(./images/team_02.jpg);
+   }
+   .card .card01 .img3{
+    background-image: url(./images/team_03.jpg);
+   }
+   .card01 .img div{
+    position: absolute;
+    height:0%;
+    width:20%;
+    background-color:orangered;
+    right:0px;
+    top:0px;
+    visibility: hidden;
+    z-index:2;
+   }
+   .card01 .img div .icons{
+    color:white;
+    display: block;
+    padding-top:20px;
+    font-size: 20px;
+    padding-left:30px;
+   }
+   .card01:hover .img div{
+    visibility: visible;
+    transition-duration:.5s;
+    height:40%;
+    /* top:0px */
+   }
+   .card01 .img::after{
+    content: "";
+    position:absolute;
+    height:0%;
+    width:100%;
+    background-color:#999;
+    opacity:0.2;
+   }
+   .card01:hover .img::after{
+    height:65%;
+    bottom:194px;
+    transition-duration: 1s;
+   }
+   .card01 h2{
+    text-align: center;
+    padding-top:15px
+   }
+   .hr{
+    height:2px;
+    width:50px;
+    background:orangered;
+    margin-left:120px;
+    margin-top:15px;
+    border:0px
+   }
+   .hr::after{
+    content:"";
+    position:absolute;
+    height:3px;
+    width:50px;
+    /* background-color:red; */
+    right:194px
+   }
+   .card01:hover .hr::after{
+    height:3px;
+    width:80px;
+    background:orangered;
+    transition-duration:1s;
+   } 
+   .r{
+    height:10px;
+    width:10px;
+    background-color: #000;
+    border-radius: 50px;
+    margin-left:180px;
+    margin-top:-10px
+   }
+   .hr1{
+    height:2px;
+    width:50px;
+    background:orangered;
+    margin-left:200px;
+    margin-top:-2px;
+    border:0px
+   }
+   .hr1::after{
+    content:"";
+    position:absolute;
+    width:0%;
+   }
+   .card01:hover .hr1::after{
+    height:3px;
+    width:80px;
+    background:orangered;
+    transition-duration:1s;
+   }
+   .card .card01 h4{
+    text-align: center;
+    padding-top:20px;
+    font-family: "Josefin Sans", sans-serif;
+    color:orangered;
+    font-weight: 100;
+   }
+   .card .card01 p{
+    text-align: center;
+    color:#999;
+    font-family: "Josefin Sans", sans-serif ;
+    padding-top:17px;
+    line-height:25px;
+   }
+
+
+   .bg{
+    position: relative;
+    height: 70vh;
+    width:100%;
+    /* border: 1px solid #000; */
+    background-image: linear-gradient( rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8) ),url(./images/ben_img_2.jpg);
+    background-size: 140% 150%;
+    top:260px
+   }
+   .bg .box{
+    position: relative;
+    height:60%;
+    width: 10%;
+    /* background-color:red; */
+    /* border: 1px solid #000; */
+    float: left;
+    margin-left:140px;
+    left:90px;
+    top:100px
+   }
+
+   .box .icon{
+    position:absolute;
+    height:33%;
+    width:65%;
+    font-size: 44px;
+    color:white;
+    background-color:orangered; 
+    top:30px;
+    left:22px;
+    padding-left:20px;
+    padding-top:18px;
+    box-sizing: border-box;
+   }
+   .box>h1{
+    text-align: center;
+    padding-top:130px;
+    color:white;
+    font-weight: 100;
+   }
+   .box>h3{
+    text-align: center;
+    padding-top:20px;
+    color:white;
+    font-weight: 600;
+    font-family:"Josefin Sans", sans-serif;
+   }
+
+   .pricing{
+    position: relative;
+    height:130vh;
+    width:100%;
+    background-color: #f2f3f5;
+    top:270px;
+    font-family:"Josefin Sans", sans-serif;
+   }
+   .pricing .cards{
+    position: relative;
+    height:65%;
+    width: 80%;
+    top:50px;
+    left:150px
+   }
+
+  .cards .one{
+    position: relative;
+    height:100%;
+    width:30%;
+    /* border: 1px solid red; */
+    float: left;
+    margin-left:30px;
+   }
+   .cards .one:hover{
+    box-shadow: 0px 0px 10px 1px #333333;
+   }
+   .cards .two{
+    box-shadow: 0px 0px 10px 1px #333333;
+   }
+   .cards .one h1{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 65px;
+    color:orangered
+   }
+   .cards .one h2{
+    text-align: center;
+    color:orangered;
+    padding-top:20px
+   }
+   .cards .one .div{
+    position:relative;
+    height:8%;
+    width:50%;
+    margin-top:25px;
+    margin-left:90px; 
+    background: rgb(44, 43, 43);
+    color:white;
+    text-align: center;
+    font-size:20px;
+    padding-top:20px
+   }
+   .cards .one:hover .div{
+    background-color:orangered;
+    transition-duration:1s;
+   }
+   .one h4{
+     text-align: center;
+     line-height:33px;
+     padding-top:25px
+   }
+   .one .button{
+    position: relative;
+    height:8%;
+    width:35%;
+    background: rgb(44, 43, 43);
+    margin-top:18px;
+    margin-left:115px;
+    border:none; 
+    color:white;
+    text-align: center;
+    font-size:18px;
+    z-index: 2;
+   }
+   .one .button::after{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:0%;
+    background-color:orangered;
+    left:0px;
+    top:0px;
+    z-index: -2;
+   }
+   .one .button:hover::after{
+    width:100%;
+    left:0%;
+    transition-duration: 2s;
+   }
+
+   .clints{
+    position: relative;
+    height:120vh;
+    width:100%;
+    /* background-color:lightpink; */
+    top:275px
+   }
+   .clints .div{
+    position: relative;
+    height:50%;
+    width:50%;
+    /* border: 1px solid #000;  */
+    box-shadow: 0px 0px 10px 1px #333333;
+    top:90px;
+    left:380px;
+    font-family:"Josefin Sans", sans-serif ;
+
+   }
+   .clints .div p{
+    text-align: center;
+   }
+   .clints .div h2{
+    text-align: center;
+    padding-top:30px;
+   }
+   .clints .div h3{
+    text-align: center;
+    /* padding-top:10px; */
+   }
+   .clints .div .img{
+    position: relative;
+    height: 12%;
+    width: 7%;
+    background-image: url(./images/img-2.jpg);
+    background-size: 100% 100%;
+    border: 5px solid orangered;
+    border-radius: 50%;
+    float: left;
+    margin-left:15px;
+    top:40px;
+    left:230px
+   }
+   .clints .div .img2{
+    background-image: url(./images/img-1.jpg);
+    border:5px solid rgb(60, 59, 59)
+   }
+   .clints .div .img3{
+    background-image: url(./images/img-3.jpg);
+    border:5px solid rgb(60, 59, 59)
+   }
+
+
+   .app{
+    position: relative;
+    height:100vh;
+    width:100%;
+    background-color:#e65100;
+    top:300px
+   }
+
+
+.contact{
+    position: relative;
+    height:150vh;
+    width:100%;
+    top:300px;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(./images/bg.png);
+    background-size:100% 100%;
+    font-family:"Josefin Sans", sans-serif 
+}
+.contact .p{
+    position: absolute;
+    height:28px;
+    width:28px;
+    background:white;
+    border-radius: 50px;
+    margin-left: 650px;
+    margin-top:30px;
+    font-size: 25px;
+    text-align: center;
+}
+.contact .form{
+    position: relative;
+    height: 75%;
+    width:100%;
+    /* background:lightblue; */
+    top:90px;
+    color:white;
+}
+.contact .input{
+    height: 90px;
+    width: 40%;
+    position: relative;
+    top: 100px;
+    left: 80px;
+    
+    margin-left: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+}
+.contact .input-detail{
+    width: 85%;
+    height: 180px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+}
+.contact  button{
+    position: relative;
+    padding:18px 40px;
+    background-color: #fff;
+    top:170px;
+    left:120px;
+    border: none;
+    color:#999;
+    font-size: 20px;
+}
+
+
+.end{
+    position: relative;
+    height:90vh;
+    width: 100%;
+    background-color: #1f1f1f;
+    top:300px
+}
+.end h1{
+    color:white;
+    font-weight: 400;
+}
+.end input{
+    position: relative;
+    height:10%;
+    width:25%;
+    left:470px;
+    top:70px;
+    outline: none;
+    border:none;
+    font-size:18px;
+}
+::placeholder{
+    color:white
+}
+.end button{
+    position: relative;
+    height:57px;
+    width:5%;
+    left:465px;
+    top:75px;
+    background-color:orangered;
+    border:none;
+    font-size:30px;
+    color:white
+}
+.footer{
+    position: relative;
+    height:25%;
+    margin-top:130px;   
+    /* border: 1px solid white; */
+    border-top:1px dotted white;
+    text-align: center;
+    padding-top: 60px;
+    /* color:white; */
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family:"Josefin Sans", sans-serif 
+}
+</style>
+<body>
+    <div class="nav">
+        <img class="img" src="./images/logo-app (1).png" alt="">
+        <ul class="ul">
+            <li class="li">Home</li>
+            <li class="li">Features</li>
+            <li class="li">Download</li>
+            <li class="li">Pricing</li>
+            <li class="li">Clints</li>
+            <li class="li">FAQs</li>
+            <li class="li">Contact</li>
+        </ul>
+    </div>
+
+  <!--------------------------------------------------------------------------------------------->
+
+    <div class="sec1">
+        <h1>Familiarize Your Creative Apps</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur<br>
+         adipiscing elit, sed do eiusmod tempor <br>
+         incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <button class="button1">APP STORE</button>
+        <button class="button2">Google Play</button>
+        <div class="img">
+            <img src="./images/app_iphone_01 (1).png" alt="">
+        </div> 
+        <button class="btn">01</button>
+        <button class="btn">02</button>
+        <button class="btn">03</button>
+        <button class="btn">04</button>
+        <button class="btn">05</button>
+    </div>
+
+  <!--------------------------------------------------------------------------------------------->
+
+    <div class="sec2">
+        <h1 class="h1">About Us</h1>
+        <p class="pg">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum <br>
+            auctor nisi elit consequat ipsum, nec sagittis sem!
+        </p>
+        <div class="part1">
+            <div class="div1">
+                <img style="height:100%; width:100%" src="./images/about-01.png" alt="">
+            </div>
+            <div class="div2">
+                <h2> Easy customization</h2>
+                <p class="p">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br>
+                   accusantium doloremque laudantium, totam rem aperiam, eaque<br>
+                   ipsa quae ab illo inventore veritatis et quasi architecto beatae<br>
+                   vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia<br>
+                   voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur<br>
+                   magni dolores eos qui ratione voluptatem sequi nesciunt. Neque <br>
+                   porro quisquam est, qui dolorem ipsum quia dolor sit amet,<br>
+                   consectetur, adipisci velit, sed quia non numquam eius modi<br>
+                   tempora incidunt ut labore et dolore magnam aliquam quaerat<br>
+                   voluptatem."
+                </p>
+            </div>
+        </div>
+
+        <div class="part2">
+            <div class="div1">
+                <h2> Easy customization</h2>
+                <p class="p">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br>
+                   accusantium doloremque laudantium, totam rem aperiam, eaque<br>
+                   ipsa quae ab illo inventore veritatis et quasi architecto beatae<br>
+                   vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia<br>
+                   voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur<br>
+                   magni dolores eos qui ratione voluptatem sequi nesciunt. Neque <br>
+                   porro quisquam est, qui dolorem ipsum quia dolor sit amet,<br>
+                   consectetur, adipisci velit, sed quia non numquam eius modi<br>
+                   tempora incidunt ut labore et dolore magnam aliquam quaerat<br>
+                   voluptatem."
+                </p>
+            </div>
+            <div class="div2">
+                <img style="height:100%; width:100%" src="./images/about-02.png" alt="">
+            </div>
+        </div>
+    </div> 
+
+  <!--------------------------------------------------------------------------------------------->
+
+    <div class="sec3">
+      <h1 class="h1">The App Features</h1>
+      <p class="pg">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum <br>
+        auctor nisi elit consequat ipsum, nec sagittis sem!
+      </p>
+     <div class="cards">
+           <div class="card1">
+               <div class="div">
+                  <i class="fa-solid fa-dove icon"></i>
+               </div>
+              <h2>Easy to Customize</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur,<br>
+                 adipiscing elit, sed do eiusmod tempor<br>
+                 incididunt ut labore et dolore magna aliqua.
+              </p>
+           </div>
+
+
+           <div class="card1">
+               <div class="div">
+                  <i class="fa-solid fa-dove icon"></i>
+               </div>
+               <h2>Easy to Customize</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur,<br>
+                 adipiscing elit, sed do eiusmod tempor<br>
+                 incididunt ut labore et dolore magna aliqua.
+               </p>
+           </div>
+
+
+           <div class="card1">
+               <div class="div">
+                  <i class="fa-solid fa-dove icon"></i>
+              </div>
+              <h2>Easy to Customize</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur,<br>
+                 adipiscing elit, sed do eiusmod tempor<br>
+                 incididunt ut labore et dolore magna aliqua.
+              </p>
+           </div>
+
+
+           <div class="card1">
+               <div class="div">
+                  <i class="fa-solid fa-dove icon"></i>
+              </div>
+              <h2>Easy to Customize</h2>
+             <p>Lorem ipsum dolor sit amet, consectetur,<br>
+                 adipiscing elit, sed do eiusmod tempor<br>
+                 incididunt ut labore et dolore magna aliqua.
+             </p>
+           </div>
+
+
+           <div class="card1">
+               <div class="div">
+                  <i class="fa-solid fa-dove icon"></i>
+              </div>
+                <h2>Easy to Customize</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur,<br>
+                   adipiscing elit, sed do eiusmod tempor<br>
+                  incididunt ut labore et dolore magna aliqua.
+              </p>
+          </div>
+
+
+          <div class="card1">
+              <div class="div">
+                 <i class="fa-solid fa-dove icon"></i>
+             </div>
+              <h2>Easy to Customize</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur,<br>
+                 adipiscing elit, sed do eiusmod tempor<br>
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+          </div>
+        </div>
+ </div>
+
+  <!--------------------------------------------------------------------------------------------->
+
+  <div class="sec4">
+      <div class="card">
+          <h1>01</h1>
+          <h2>Go App Store</h2>
+          <p>Lorem Ipsum dolroin gravida nibh vel<br>
+               velit aliquet. Aenean sollicitudin, lorem<br>
+               quis bibendum..
+          </p>
+       </div>
+
+       <div class="card">
+          <h1>02</h1>
+         <h2>Create an Account</h2>
+         <p>Lorem Ipsum dolroin gravida nibh vel<br>
+               velit aliquet. Aenean sollicitudin, lorem<br>
+               quis bibendum..
+         </p>
+        </div>
+
+        <div class="card">
+            <h1>03</h1>
+           <h2>Download the App</h2>
+           <p>Lorem Ipsum dolroin gravida nibh vel<br>
+                velit aliquet. Aenean sollicitudin, lorem<br>
+                quis bibendum..
+            </p>
+        </div>
+
+        <div class="card">
+          <h1>04</h1>
+          <h2>Enjoy & Rate us!</h2>
+          <p>Lorem Ipsum dolroin gravida nibh vel<br>
+             velit aliquet. Aenean sollicitudin, lorem<br>
+             quis bibendum..
+          </p>
+       </div>
+  </div>
+  <div style="clear:both;"></div>
+
+  <!--------------------------------------------------------------------------------------------->
+
+  
+  <div class="sec5">
+        <h1 class="h1">Screenshots Of App</h1>
+        <p class="pg">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br>
+           auctor nisi elit consequat ipsum, nec sagittis sem!
+        </p>
+        <div class="div">
+            <img class="img1" src="./images/screenshot_03.png" alt="">
+            <img class="img2" src="./images/screenshot_05.png" alt="">
+            <img class="img3" src="./images//screenshot_04.png" alt="">
+        </div>
+  </div>
+
+  <!--------------------------------------------------------------------------------------------->
+
+  <div class="sec6">
+     <h1>Download Start</h1>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id felis<br>
+         rhoncus, ultrices dolor quis, faucibus velit. Interdum et malesuada<br>
+         fames ac ante ipsum primis in faucibus.
+     </p>
+      <img src="./images/iphones.png" alt="">
+  </div>
+
+  <!--------------------------------------------------------------------------------------------->
+
+  <div class="sec7">
+        <div class="div">
+            <h4>download on the</h4>
+            <h2>Google Play</h2>
+        </div>
+        <div class="div">
+            <h4>download on the</h4>
+            <h2>App Store</h2>
+        </div>
+        <div class="div">
+            <h4>download on the</h4>
+            <h2>Window Store</h2>
+        </div>
+  </div>
+
+  <!--------------------------------------------------------------------------------------------->
+
+  <div class="dev">
+        <h1 class="h1">The Dev Team</h1>
+        <p class="pg">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, true generator<br>
+         on the Internet. It uses a dictionary of over..
+       </p>
+        <div class="card">
+            <div class="card01">
+                <div class="img">
+                    <div>
+                        <i class="fa-brands fa-square-facebook icons"></i>
+                        <i class="fa-brands fa-twitter icons"></i>
+                        <i class="fa-brands fa-linkedin icons"></i>
+                        <i class="fa-brands fa-whatsapp icons"></i>
+                    </div>
+                </div>
+                <h2>Williamson</h2>
+                <hr class="hr">
+                <div class="r"></div>
+                <hr class="hr1">
+                <h4>Founder & CEO</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur elit.<br>
+                    Error eveniet nemo aspernatur?
+                </p>
+            </div>
+
+
+            <div class="card01">
+                <div class="img img2">
+                    <div>
+                        <i class="fa-brands fa-square-facebook icons"></i>
+                        <i class="fa-brands fa-twitter icons"></i>
+                        <i class="fa-brands fa-linkedin icons"></i>
+                        <i class="fa-brands fa-whatsapp icons"></i>
+                    </div>
+                </div>
+                <h2>Kristina</h2>
+                <hr class="hr">
+                <div class="r"></div>
+                <hr class="hr1">
+                <h4>UL Designer</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur elit.<br>
+                    Error eveniet nemo aspernatur?
+                </p>
+            </div>
+
+
+            <div class="card01">
+                <div class="img img3">
+                    <div>
+                        <i class="fa-brands fa-square-facebook icons"></i>
+                        <i class="fa-brands fa-twitter icons"></i>
+                        <i class="fa-brands fa-linkedin icons"></i>
+                        <i class="fa-brands fa-whatsapp icons"></i>
+                    </div>
+                </div>
+                <h2>Steve Thamas</h2>
+                <hr class="hr">
+                <div class="r"></div>
+                <hr class="hr1">
+                <h4>Chief Develpor</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur elit.<br>
+                    Error eveniet nemo aspernatur?
+                </p>
+            </div>
+            
+        </div>
+    </div>
+ 
+    <!--------------------------------------------------------------------------------------------->
+
+    <div class="bg">
+        <div class="box">
+            <div class="icon">
+                <i class="fa-brands fa-pinterest"></i>
+            </div> 
+            <h1>12500</h1>
+            <h3>App Store</h3>
+        </div>
+
+        <div class="box">
+            <div class="icon">
+            <i class="fa-brands fa-amazon"></i>
+            </div>
+            <h1>31000</h1>
+            <h3>Amazon</h3>
+        </div>
+
+        <div class="box">
+            <div class="icon">
+                <i class="fa-brands fa-snapchat"></i>
+            </div>
+            <h1>15788</h1>
+            <h3>Google play</h3>
+        </div>
+
+        <div class="box">
+            <div class="icon">
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+            <h1>21000</h1>
+            <h3>Window App</h3>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+  <!--------------------------------------------------------------------------------------------->
+
+  <div class="pricing">
+       <h1 class="h1">Pricing</h1>
+        <p class="pg">
+            Get the red carpet treatment just $39 per month! It is estimated that 3.5 million established by personal blogs.<br>
+           From each other, we share paid WordPress themes WP Service...
+       </p>
+       <div class="cards">
+            <div class="one">
+                <h1>$10</h1>
+                <h2>MONTHLY</h2>
+                <div class="div">Standard</div>
+                <h4>50 GB Disk Space<br>
+                    50 Email Accounts<br>
+                    50 GB Monthly Bandwidth<br>
+                    10 Subdomains<br>
+                    15 Domains<br>
+               </h4>
+                <button class="button">Sign Up</button>
+           </div>
+
+           <div class="one two">
+              <h1>$20</h1>
+              <h2>Bussiness</h2>
+              <div class="div">Standard</div>
+              <h4>50 GB Disk Space<br>
+                 50 Email Accounts<br>
+                 50 GB Monthly Bandwidth<br>
+                 10 Subdomains<br>
+                  15 Domains<br>
+             </h4>
+             <button class="button">Sign Up</button>
+            </div>
+
+            <div class="one">
+                <h1>$30</h1>
+                <h2>Premium</h2>
+                <div class="div">Standard</div>
+                <h4>50 GB Disk Space<br>
+                  50 Email Accounts<br>
+                  50 GB Monthly Bandwidth<br>
+                  10 Subdomains<br>
+                  15 Domains<br>
+              </h4>
+              <button class="button">Sign Up</button>
+            </div>
+       </div>
+  </div>
+  
+  <!--------------------------------------------------------------------------------------------->
+ 
+  <div class="clints">
+       <h1 class="h1">Happy Clients</h1>
+       <p class="pg">We thanks for all our awesome testimonials! There are hundreds of our happy customers! Let's<br>
+         see what others say about Appfast website template!
+      </p>
+      <div class="div">
+          <img style="height:25px; width:25px; margin-top:60px; margin-left:30px;" src="./images/images-removebg-preview.png" alt="">
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie, justo<br>
+             nec convallis sollicitudin, sapien lorem dictum lacus, non consequat odio ipsum nec<br>
+             est. Sed mattis egestas elementum. Nulla facilisi. Quisque placerat risus ac nunc<br>
+             ornare tincidunt. Sed quis faucibus nunc. Pellentesque accumsan arcu mi, eget<br>
+             venenatis mauris.
+          </p>
+           <h2>Williamson</h2>
+           <h3>Web develpor</h3>
+           <div class="img"></div>
+           <div class="img img2"></div>
+           <div class="img img3"></div>
+     </div>
+  </div>
+
+  <!--------------------------------------------------------------------------------------------->
+
+  <div class="app">
+        <img src="./images/picture.png" alt="">
+        <img style="height:70%;width:40%; margin-top:70px;margin-left:100px" src="./images/about-02.png" alt="">
+  </div>
+
+  <!--------------------------------------------------------------------------------------------->
+
+  <div class="contact">
+        <h1 class="h1" style="color:white">Get In Touch</h1>
+        <div class="p">?</div>
+        <div class="form">
+            <input type="text" placeholder="First Name" class="input">
+            <input type="text" placeholder="last Name" class="input">
+            <input type="mail" placeholder="Your Mail" class="input">
+            <input type="number" placeholder="Your Phone" class="input">
+            <input type="text" placeholder="Give Us More Details" class=" input input-detail">
+            <button class="button1">Get A Qoute</button>
+        </div>
+  </div>
+
+  <!--------------------------------------------------------------------------------------------->
+
+  <div class="end">
+        <h1 class="h1">Subscribe for Newsletter</h1>
+        <p class="pg">
+          Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor coli<br>
+         incididunt ut labore Lorem ipsum madolor sit amet, consectetur adipisicing incididunt.
+      </p>
+       <input type="email" placeholder="Email Adress...">
+       <button>
+         <i class="fa-brands fa-telegram"></i>
+       </button>
+       <div class="footer">
+            All Rights Reserved. © 2018 <b style="color:white; font-weight: 100;">ProApp</b> Design By :<b style="color:white;font-weight: 100                 ">html design</b>
+       </div>
+  </div>
+</body>
+</html>

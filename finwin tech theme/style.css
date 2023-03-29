@@ -1,0 +1,52 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./images/028209dc8f614bda9a7ea8af3dbad798.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.li {
+    transition-duration: 0.3s;
+}
+
+.li:hover {
+    color: #337BB1;
+    transition-duration: 0.3s;
+}
+
+.arrow {
+    animation-name: up-down;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes up-down {
+    0% {
+        bottom: 80px;
+    }
+
+    50% {
+        bottom: 60px;
+    }
+
+    100% {
+        bottom: 80px;
+    }
+}
+
+.line {
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(#0d8ee9, #0d8ee9);
+    transition-duration: 0.5s;
+}
+
+.li:hover .line {
+    transition-duration: 0.5s;
+    width: 100%;
+}

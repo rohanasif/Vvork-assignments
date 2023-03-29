@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav {
+    width: 100%;
+    padding: 40px;
+    position: fixed;
+    background-color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-right: 70px;
+    display: inline-block;
+    color: beige;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.cards {
+    padding: 40px;
+}
+
+.card {
+    display: inline-block;
+    border: 2px solid;
+    box-sizing: border-box;
+    background-color: aqua;
+    height: 400px;
+    width: 33%;
+}

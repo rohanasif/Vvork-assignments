@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.width-85 {
+    max-width: 85%;
+    margin: 0px auto;
+}
+
+.bg {
+    background: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
+}
+
+.btn-1 {
+    background: linear-gradient(97.65deg, #60BBEE 0.33%, #0A72AD 93.35%);
+    box-shadow: 0px 10px 15px rgba(1, 115, 153, 0.2);
+}
+
+.blue {
+    color: #2387C0;
+}
+
+.blue-2 {
+    background: linear-gradient(97.73deg, #399FD8 -6.96%, #0775B4 23.5%, #003756 92.79%);
+
+    box-shadow: 0px 10px 15px rgba(1, 115, 153, 0.2);
+}
+
+.bg-grey {
+    background: #F6F6F6CC;
+
+}
+
+.grey {
+    color: #C4C4C4;
+}
+
+.blue-3 {
+    background: linear-gradient(90deg, #60BBEE -2.22%, #2387C0 67.22%);
+}
+
+.blue-circle {
+    background: #2387C0;
+}
+

@@ -1,0 +1,255 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* border: 2px solid red; */
+    overflow: hidden;
+}
+
+.sea{
+    background-image: url(../imgs/sea.png);
+    width: 100%;
+    height: 50%;
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    animation: seaNight 14s linear;
+    animation-delay: 37s;
+}
+
+@keyframes seaNight{
+    0%{
+        background-image: url(../imgs/sea.png);
+    }
+    100%{
+        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../imgs/sea.png);
+    }
+}
+
+.boat{
+    width: 500px;
+    position: absolute;
+    right: -500px;
+    top: -20px;
+    animation: boat 10s linear infinite;
+    z-index: 1;
+}
+
+.fish{
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    right: -150px;
+    animation: fish 12s linear infinite;
+    opacity: .5;
+}
+
+.fish2{
+    top: 25%;
+    animation-delay: 3s;
+}
+
+.fish3{
+    top: 60%;
+    animation-delay: 5s;
+}
+
+@keyframes boat{
+    0%{
+        right: -600px;
+    }
+    15%{
+        top: -10px;
+    }
+    30%{
+        top: -20px;
+    }
+    45%{
+        top: -10px;
+    }
+    55%{
+        top: -20px;
+    }
+    70%{
+        top: -10px;
+    }
+    85%{
+        top: -20px;
+    }
+    100%{
+        right: 100%;
+        top: -10px;
+    }
+}
+
+@keyframes fish{
+    0%{
+        right: -150px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+.clouds{
+    /* border: 2px solid green; */
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 0px;
+    background: rgb(190,188,224);
+    background: linear-gradient(354deg, rgba(190,188,224,1) 0%, rgba(20,112,180,1) 71%);
+    animation: night 14s linear;
+    animation-delay: 37s;
+}
+
+@keyframes night{
+    0%{
+        background: rgb(190,188,224);
+        background: linear-gradient(354deg, rgba(190,188,224,1) 0%, rgba(20,112,180,1) 71%);
+        /* opacity: 0; */
+    }
+    20%{
+        background-image: url(../imgs/night_sky.png);
+        background-size: cover;
+        opacity: .5;
+    }
+    100%{
+        background-image: url(../imgs/night_sky.png);
+        background-size: cover;
+    }
+}
+
+.cloud{
+    width: 200px;
+    margin: 0 30px;
+    position: relative;
+    animation: cloud 30s linear;
+    left: -100%;
+    animation-delay: 6s;
+}
+
+@keyframes cloud{
+    0%{
+        left: -100%;
+    }
+    30%{
+        left: 0;
+    }
+    70%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.rain{
+    position: absolute;
+    top: -70vh;
+    overflow: hidden;
+    display: flex;
+    animation: rain 5s;
+    animation-delay: 14s;
+}
+
+.rain-img{
+    width: 700px;
+    height: 70vh;
+}
+
+@keyframes rain{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    100%{
+        top: 100%;
+    }
+}
+
+.birds{
+    position: absolute;
+    top: 0;
+    right: -34%;
+    /* width: 200px; */
+    animation: birds 7s linear;
+    animation-delay: 30s;
+}
+
+@keyframes birds{
+    0%{
+        right: -34%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+.sun{
+    position: absolute;
+    /* border: 2px solid red; */
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    left: -100px;
+    animation: sun 8s 1;
+}
+
+.sun img{
+    width: 100%;
+}
+
+@keyframes sun{
+    0%{
+        left: -100px;
+    }
+    80%{
+        left: 40px;
+    }
+    100%{
+        left: -100px;
+    }
+}
+
+.moon{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgb(4,9,41);
+    background: radial-gradient(circle, rgba(4,9,41,1) 0%, rgba(32,37,87,1) 54%, rgba(146,146,150,1) 99%);
+    box-shadow: 0 0 25px 15px gray;
+    /* filter: blur(2px); */
+    opacity: 0;
+    animation: moon 14s linear;
+    animation-delay: 37s;
+}
+
+@keyframes moon{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}

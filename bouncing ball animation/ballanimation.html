@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .namediv{
+            height: 120px;
+            width: 100%;
+            border: 1px solid black;
+            background-image: linear-gradient(to right bottom, red,green);
+            /* position: relative; */
+        }
+        .namediv>h1{
+            font-size: 50px;
+            text-align: center;
+            color: yellow;
+            margin-top: 25px;
+            transition-property: transform;
+            transition-duration: 2s;
+
+        }
+        .namediv>h1:hover{
+            transform: skew(20deg);
+            cursor: pointer;
+            color: aqua;
+            /* transition-duration: 2s; */
+        }
+        .ballmain{
+            height: 420px;
+            width: 11%;
+            border: 1px solid ;
+            border-radius: 15px;
+            margin-left: 100px;
+            margin-top: 25px;
+            position: relative;
+            background-image: linear-gradient(to bottom left ,aqua,green);
+        }
+        .ball{
+            height: 90px;
+            width: 90px;
+            border: 1px solid;
+            position: absolute;
+            border-radius: 50%;
+            margin-left: 30px;
+            /* margin-top: 100%; */
+            background-color: purple;
+            animation: ball 1.8S linear 0s infinite;
+            transition-duration: 1s;
+        }
+        @keyframes ball {
+            0%{
+                top: 0px;
+                background-color: blue;
+            }
+            50%{
+                top: 335px;
+                background-color: red;
+            }
+            100%{
+                    top: 0px;
+                background-color: blue;
+            }
+        }
+        .longdiv{
+            height: 50px;
+            width: 35% ;
+            border: 1px solid black;
+            position: relative;
+            left: 27%;
+            top: -420px;
+            border-radius: 20px;
+        }
+        .colordiv{
+            height: 50px;
+            width: 0px;
+            animation: long 2s ease-out 1 forwards ;
+            border-radius: 20px ;
+
+
+        }
+        @keyframes long {
+            25%{
+                background-color: purple;
+                
+            }
+            50%{
+                background-color: red;
+            }
+            75%{
+                background-color: blue;
+            }
+            100%{
+                background-color: black;
+                width: 90%;
+            }
+        }
+        .greendivsmain{
+            height: 350px;
+            width: 35%;
+            border: 1px solid black;
+            position: relative;
+            left: 27%;
+            border-radius: 20px;
+            top: -410px;
+        }
+        .greendivs{
+            height: 50%;
+            width: 10%;
+            /* border: 1px solid; */
+            float: left;
+            position: relative;
+            top: 50%;
+            left: 20px;
+            margin-left: 35px;
+            background-color: aqua;
+        }
+        .gr2{
+            height: 32%;
+            top: 68%;
+        }
+        .gr4{
+            height: 32%;
+            top: 68%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="namediv">
+        <h1>ABDUL MUGHNI</h1>
+    </div>
+    <div class="ballmain">
+        <div class="ball"></div>
+    </div>
+    <div class="longdiv">
+        <div class="colordiv"></div>
+    </div>
+    <div class="greendivsmain">
+        <div class="greendivs"></div>
+        <div class="greendivs gr2"></div>
+        <div class="greendivs"></div>
+        <div class="greendivs gr4"></div>
+        <div class="greendivs"></div>
+        <div class="bal"></div>
+    </div>
+</body>
+</html>

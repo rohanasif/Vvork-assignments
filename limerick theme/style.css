@@ -1,0 +1,289 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+nav {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+nav>div {
+    align-self: center;
+}
+
+.child {
+    position: relative;
+
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 250vh;
+}
+
+.child1 {
+    grid-area: 1/1/3/3;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+
+.child1:hover .image1 {
+    transform: scale(1.2) rotate(10deg);
+    transition-duration: 1s;
+}
+
+.image1 {
+    background-image: url(./images/1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    transition-duration: 1s;
+}
+
+.text1 {
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    z-index: 2;
+}
+
+.text1>h2 {
+    font-size: 34px;
+    color: white;
+    padding-bottom: 20px;
+    transition-duration: 0.5s;
+}
+
+.text1>h2:hover {
+    color: #ff3271;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.text1>button {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    background-color: #ff3271;
+    color: white;
+    padding: 20px;
+    border-radius: 30px;
+    transition-duration: 0.5s;
+}
+
+.text1>button:hover {
+    box-sizing: border-box;
+    border: 1px solid #ff3271;
+    background-color: transparent;
+    color: #ff3271;
+    transition-duration: 0.5s;
+}
+
+.image2 {
+    background-image: url(./images/2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    transition-duration: 1s;
+}
+
+.child2 {
+    position: relative;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+
+.child2:hover .image2 {
+    transform: scale(1.2) rotate(10deg);
+    transition-duration: 1s;
+}
+
+.icon-hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+    visibility: hidden;
+    top: 150px;
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 100px;
+    background-color: transparent;
+    z-index: 4;
+}
+
+.icon-hover>i {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.child:hover .icon-hover {
+    transition-duration: 0.5s;
+    top: 110px;
+    visibility: visible;
+}
+
+
+.bar-hover {
+    position: relative;
+}
+
+.bar-hover::before {
+    position: absolute;
+    top: 110px;
+    content: "";
+    width: 0%;
+    height: 100px;
+    background-color: rgba(255, 50, 113, 0);
+    z-index: 3;
+    transition-duration: 0.5s;
+}
+
+
+.bar-hover::after {
+    top: 110px;
+    right: 0px;
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 3;
+    transition-duration: 0.5s;
+}
+
+.child:hover .bar-hover::after {
+    width: 50%;
+    transition-duration: 0.5s;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.child:hover .bar-hover::before {
+    width: 50%;
+    transition-duration: 0.5s;
+    background-color: rgba(255, 50, 113, 0.9);
+}
+
+.child3 {
+    position: relative;
+    overflow: hidden;
+}
+
+.text2 {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    font-weight: 900;
+    left: 100px;
+    top: 150px;
+    z-index: 2;
+}
+
+.image3 {
+    background-image: url(./images/3.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    transition-duration: 1s;
+}
+
+.child3:hover .image3 {
+    transform: scale(1.2) rotate(10deg);
+    transition-duration: 1s;
+}
+
+.child3:hover .icon-hover {
+    transition-duration: 0.5s;
+    top: 110px;
+    visibility: visible;
+}
+
+.child4 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image4 {
+    background-image: url(./images/4.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    transition-duration: 1s;
+}
+
+.child4:hover .image4 {
+    transform: scale(1.2) rotate(10deg);
+    transition-duration: 1s;
+}
+
+.child5:hover .icon-hover {
+    transition-duration: 0.5s;
+    top: 110px;
+    visibility: visible;
+}
+
+.child5 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image5 {
+    background-image: url(./images/5.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    transition-duration: 1s;
+}
+
+.child5:hover .image5 {
+    transform: scale(1.2) rotate(10deg);
+    transition-duration: 1s;
+}
+
+.child6:hover .icon-hover {
+    transition-duration: 0.5s;
+    top: 110px;
+    visibility: visible;
+}
+
+.child6 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image6 {
+    background-image: url(./images/6.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    transition-duration: 1s;
+}
+
+.child6:hover .image6 {
+    transform: scale(1.2) rotate(10deg);
+    transition-duration: 1s;
+}
+
+.child7 {
+    background-color: #AC60FF;
+}
+
+.child8 {
+    grid-area: 3/3/4/5;
+}
+
+.child9 {
+    grid-area: 4/1/4/3;
+}
+
+.child14 {
+    grid-area: 5/3/6/5;
+}

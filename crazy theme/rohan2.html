@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Site 2.0</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        body {
+            background-color: aqua;
+        }
+
+        .container {
+            margin: 50px 20px;
+
+        }
+
+        .nav {
+            color: white;
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav>h1 {
+            margin-left: 20px;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        #first-ul {
+            font-size: large;
+            margin-top: 25px;
+            margin-right: 25px;
+            list-style: none;
+            float: right;
+        }
+
+        #first-ul>li {
+            display: inline-block;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .nav>hr {
+            width: 95%;
+            border: none;
+            background-color: white;
+            margin-left: 20px;
+            height: 5px;
+        }
+
+        #navplusone {
+            height: 120vh;
+            background-image: linear-gradient(rgba(15, 0, 131, 0.9), rgba(0, 0, 0, 0.9)), url('./images/bg11.png');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #one {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            text-align: center;
+            width: 800px;
+        }
+
+        #one>h1 {
+            margin-top: 100px;
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        #one>p {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        #other-ul {
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            list-style: none;
+            font-size: large;
+        }
+
+        #other-ul>li {
+            display: inline-block;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        #two {
+            margin-top: -100px;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            background-color: white;
+        }
+
+        #two>h1 {
+            font-size: 120px;
+            color: #d4d1d1;
+            margin-top: 100px;
+        }
+
+        #two>p {
+            font-style: italic;
+            margin-top: 40px;
+            font-size: 20px;
+        }
+
+        #overlap {
+            width: 75%;
+            margin: auto;
+        }
+
+        #overlap-2 {
+            width: 75%;
+            margin: auto;
+        }
+
+        #text-div {
+            padding: 80px;
+            background-color: #04042E;
+            color: white;
+            width: 50%;
+            float: left;
+            height: 450px;
+        }
+
+        #text-div>p {
+            margin-top: 40px;
+        }
+
+        #text-div>button {
+            margin-top: 40px;
+            width: 200px;
+            height: 70px;
+        }
+
+        #img-div {
+            float: left;
+            margin-top: -500px;
+            margin-left: 600px;
+            width: 50%;
+            height: 500px;
+            background-image: url(./images/index_one_about.png);
+            background-position: -30px;
+        }
+
+        .three-card {
+            border: 1px solid black;
+            width: 30%;
+            height: auto;
+            padding: 20px;
+        }
+
+
+        #card-1,
+        #card-2,
+        #card-3,
+        #card-4 {
+            display: inline-block;
+        }
+
+        #four {
+            background-color: white;
+            text-align: center;
+        }
+
+        #four>h1 {
+            padding-top: 40px;
+            color: #d4d1d1;
+            font-size: 120px;
+        }
+
+        #four>p {
+            font-style: italic;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+
+        #four>hr {
+            width: 95%;
+            border: none;
+            background-color: black;
+            margin-left: 20px;
+            height: 5px;
+        }
+
+        #left-img {
+            margin-left: 20px;
+            margin-top: 20px;
+            float: left;
+            width: 48%;
+            height: 500px;
+            background-image: url(./images/services-01.png)
+        }
+
+        #right-text {
+            padding: 40px;
+            margin-right: 20px;
+            margin-top: 20px;
+            float: left;
+            width: 40%;
+            height: 500px;
+
+        }
+
+        #four-split {
+            display: inline-block;
+        }
+
+
+        #four-split>button {
+            margin-top: 40px;
+        }
+
+
+        #five {
+            background-image: linear-gradient(rgb(79, 79, 170), rgb(4, 47, 240)), url('./images/bg3.png');
+            text-align: center;
+            margin: -30px auto;
+            width: auto;
+            height: 500px;
+        }
+
+        #five>h1 {
+            color: white;
+            margin: 30px auto;
+            font-size: 80px;
+        }
+
+        #five>p {
+            color: white;
+            margin: 30px auto;
+            font-size: 25px;
+            width: 80%;
+        }
+
+        #six {
+            width: 100%;
+            height: 500px;
+            text-align: center;
+            background-image: linear-gradient(rgba(13, 4, 86, 0.9), rgba(17, 16, 16, 0.9)), url('./images/bg3.png');
+            background-attachment: fixed;
+        }
+
+        #six>h1 {
+            color: #d4d1d1;
+            font-size: 120px;
+            margin: 30px auto;
+        }
+
+        #six>p {
+            font-size: 25px;
+            margin: 30px 100px;
+        }
+
+
+        #eight {
+            margin: 40px 100px;
+            float: left;
+            width: 100%;
+            height: 300px;
+        }
+
+        .eight-card {
+            float: left;
+            text-align: center;
+            width: 20%;
+            height: 100%;
+
+        }
+
+        #seven {
+            background-color: white;
+            height: 100%;
+            width: 100%;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .card {
+            width: 25%;
+            margin-top: 30px;
+            float: left;
+            margin-left: 35px;
+        }
+
+        #card-one {
+            background-image: url(./images/1.jpg);
+        }
+
+        #card-two {
+            background-image: url(./images/2.jpg);
+        }
+
+        #card-three {
+            background-image: url(./images/3.jpg);
+        }
+
+        #card-four {
+            background-image: url(./images/4.jpg);
+        }
+
+        #card-five {
+            background-image: url(./images/5.jpg);
+        }
+
+        #card-six {
+            background-image: url(./images/6.jpg);
+        }
+
+        .card>img {
+            width: 100%;
+        }
+
+        #img2-div {
+            float: left;
+            width: 50%;
+            height: 500px;
+            background-image: url(./images/testimonial-img.png);
+            background-position: -30px;
+        }
+
+        #text2-div {
+            float: left;
+            margin-left: 400px;
+            margin-top: -400px;
+            background-color: #04042E;
+            color: white;
+            width: 50%;
+            height: 70%;
+        }
+
+        #ten {
+            width: 100%;
+            height: 50vh;
+            background-image: url(./images/bg2.png);
+            background-size: 100% 100%;
+            float: left;
+            margin-top: 100px;
+        }
+
+        #eleven {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            background-color: white;
+        }
+
+        #eleven>h1 {
+            color: #d4d1d1;
+            font-size: 120px;
+        }
+
+        #div-in-eleven {
+            width: 100%;
+        }
+
+        #div-in-eleven>img {
+            margin-top: 60px;
+            margin-left: 40px;
+            float: left;
+            width: 40%;
+            height: 80vh;
+
+        }
+
+        #div-in-eleven>h4 {
+            margin-top: 250px;
+            margin-left: 20px;
+            float: left;
+            color: #8F8F8F;
+        }
+
+        #div-in-eleven>p {
+            float: left;
+        }
+
+        #div-in-eleven>p {
+            float: left;
+        }
+
+        #twelve {
+            margin-top: 600px;
+        }
+
+        #twelve>button {
+            width: 200px;
+            height: 80px;
+            margin-top: 500px;
+
+        }
+
+        .three-cards {
+            margin-top: 40px;
+            float: left;
+            width: 50vh;
+            margin-left: 30px;
+            margin-right: 10px;
+        }
+
+        .three-cards>img {
+            margin: 20px auto;
+            width: 100%;
+            height: 100%;
+        }
+
+        .three-cards>
+
+        #thirteen {
+            display: inline-block;
+            margin-top: 500px;
+            border: 2px solid black;
+            width: auto;
+        }
+
+        #thirteen>form>input {
+            display: inline-block;
+            width: 250px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navplusone">
+            <div class="nav">
+                <h1>THE/CRAZY</h1>
+                <ul id="first-ul">
+                    <li>01.HOME</li>
+                    <li>02.ABOUT US</li>
+                    <li>03.OUR WORKS</li>
+                    <li>04.BLOG</li>
+                    <li>05.CONTACT US</li>
+
+                </ul>
+                <hr>
+                <div id="one">
+                    <h1 style="font-size:50px;">FEEL EVERY MOMENT</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sequi aliquid iusto soluta
+                        blanditiis, reiciendis doloribus placeat quae delectus?</p>
+                    <div>
+                        <button
+                            style="width:250px; height:70px;margin-top:40px; margin-right:40px; background-color: blue; color:white; border-color: aqua;font-size: 20px;"><b>VIEW
+                                OUR
+                                WORKS</b></button>
+                        <button
+                            style="width:250px; height:70px;margin-top:40px; background-color: blue; color:white;border-color: aqua;font-size: 20px"><b>CONTACT
+                                US</b></button>
+                    </div>
+                </div>
+                <hr style="margin-top:40px">
+                <ul id="other-ul">
+                    <li>ALL</li>
+                    <li>WEB DESIGN</li>
+                    <li>DEVELOPMENT</li>
+                    <li>GRAPHIC DESIGN</li>
+                    <li>BRANDING</li>
+                    <li>PHOTOGRAPHY</li>
+                </ul>
+            </div>
+        </div>
+        <div id="two">
+            <h1>ABOUT US</h1>
+            <p>Donec dictum eu nisl viverra egestas. Duis quis consequat elit, id pretium felis molestie
+                dui lobortis ullamcorper in sit amet quam.</p>
+            <div id="overlap">
+
+                <div id="text-div">
+                    <h1>WHO WE ARE</h1>
+                    <p>Pellentesque vitae feugiat nisi, et haretra eros. Cras vehicula
+                        dignissim augue vitae efficitur. Aliquam erat volutpat. Nulla
+                        facilisi. onec ut felis eget turpis tempus mattis. Proin aliquet nec
+                        erat at laoreet. Ut justo ligula, finibus hendrerit sapien et, gravida
+                        aliquam urna. Pellentesque habitant morbi tristique senectus et
+                        netus et malesuada fames ac turpis egestas. Fusce quis felis
+                        nec dolor interdum lacinia.</p>
+                    <button>READ MORE</button>
+                </div>
+                <div id="img-div"></div>
+
+            </div>
+            <h1 style="font-size: 50px; margin-top: 800px;color:black;">IDEA + DESIGN + DEVELOPMENT = HEART</h1>
+        </div>
+        <div id="three">
+            <div id="card-1" class="three-card">
+                <h1>well Orgnaized</h1>
+                <p>Pellentesque diam, vulputate vitae mollis a, mollis id nisi</p>
+            </div>
+            <div id="card-2" class="three-card">
+                <h1>Creative design</h1>
+                <p>Pellentesque diam, vulputate vitae mollis a, mollis id nisi</p>
+            </div>
+            <div id="card-3 " class="three-card">
+                <h1>Easy to customize</h1>
+                <p>Pellentesque diam, vulputate vitae mollis a, mollis id nisi</p>
+            </div>
+            <div id="card-4" class="three-card">
+                <h1>Support 24/7</h1>
+                <p>Pellentesque diam, vulputate vitae mollis a, mollis id nisi</p>
+            </div>
+        </div>
+        <div id="four">
+            <h1>WHAT WE DO</h1>
+            <p>Suspendisse potenti. In dignissim quis turpis nec egestas. Curabitur faucibus sollicitudin
+                magna, mattis sagittis erat tempus eget.</p>
+
+            <hr style="margin-bottom: 40px;">
+            <div id="four-split">
+                <div id="left-img">
+
+                </div>
+                <div id="right-text">
+                    <h1>01. GRAPHIC DESIGN</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        reprehenderit omnis cumque similique quo doloribus minima?
+                        Lorem ipsum, dolor sit amet consectetur adipisicingPer
+                        spiciatis dolorum in r mollitia consequatur blanditiis.
+                        Lorem ipsum dolor sit amet consectetur
+                        impedit eius consectetur laborum sasperiores quidem nostrum,
+                        iste repellat ratione temporibus sint eniam accusamus qui</p>
+                    <button style="width:250px; height:70px; border: 2px solid aqua">VIEW WORK</button>
+                </div>
+            </div>
+        </div>
+        <div id="five">
+            <h1>WE LOVE OUR WORK</h1>
+            <p>Mauris interdum blandit enim et elementum. Suspendisse potenti. Mauris nulla ipsum, euismod et
+                lacinia em.
+                Donec lobortis magna sed urna cursus, vitae ultrices sapien pellentesque.
+                In posuere, risus sed aliquet varius, tortor neque.</p>
+        </div>
+
+        <div id="six">
+            <h1>OUR WORKS</h1>
+            <p>Donec dictum eu nisl viverra egestas. Duis quis consequat elit, id pretium felis molestie
+                dui lobortis ullamcorper in sit amet quam.</p>
+
+
+        </div>
+        <div id="seven">
+            <div class="card" id="card-one"><img src="./images/mask-circle.png"></div>
+            <div class="card" id="card-two"><img src="./images/mask-cross.png"></div>
+            <div class="card" id="card-three"><img src="./images/mask-triangle.png"></div>
+            <div class="card" id="card-four"><img src="./images/mask-circle.png"></div>
+            <div class="card" id="card-five"><img src="./images/mask-triangle.png"></div>
+            <div class="card" id="card-six"><img src="./images/mask-cross.png"></div>
+            <button style="float: left; margin-top: 400px;">SEE ALL WORKS</button>
+        </div>
+        <div id="eight">
+            <div id="card-11" class="eight-card">
+                <h3>well Orgnaized</h3>
+                <p>Pellentesque diam, vulputate vitae mollis a, mollis id nisi</p>
+            </div>
+            <div id="card-12" class="eight-card">
+                <h3>Creative design</h3>
+                <p>Pellentesque diam, vulputate vitae mollis a, mollis id nisi</p>
+            </div>
+            <div id="card-13" class="eight-card">
+                <h3>Easy to customize</h3>
+                <p>Pellentesque diam, vulputate vitae mollis a, mollis id nisi</p>
+            </div>
+            <div id="card-14" class="eight-card">
+                <h3>Support 24/7</h3>
+                <p>Pellentesque diam, vulputate vitae mollis a, mollis id nisi</p>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+
+        <div id="nine">
+            <div id="overlap-2">
+                <div id="img2-div"></div>
+                <hr style="float:left; height: 5px; background-color: black; border: none;">
+                <div id="text2-div">
+
+                    <h1>DIVA SPAN</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Inventore iste debitis illo vero magnam minus, natus nobis
+                        fuga illum explicabo porro possimus repellat culpa voluptate
+                        provident omnis totam quos maxime. Lorem ipsum dolor, sit
+                        amet consectetur adipisicing elit. Consequuntur perferendis
+                        esse aspernatur quaerat qui pariatur reiciendis voluptates
+                        et sequi porro.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div id="ten"></div>
+        <div style="clear:both;"></div>
+        <div id="eleven">
+            <h1>BLOG</h1>
+            <p>Donec dictum eu nisl viverra egestas. Duis quis consequat elit, id pretium felis molestie
+                dui lobortis ullamcorper in sit amet quam.</p>
+            <div id="div-in-eleven">
+                <img src="./images/blog_index_0.png">
+                <h4>
+                    16-09-22</h4>
+                <p style="margin-top:280px; margin-left:-60px;font-weight: bold;">Aliquam accumsan sapien dignim la
+                    scelerisque arcu sagittis sed</p>
+                <p style="margin-top:10px; margin-left:20px;color: #8F8F8F;">Vestibulum euismod sodales. Suspend
+                    consequat, quis tincidunt molestie.</p>
+            </div>
+        </div>
+        <div id="twelve">
+
+            <div class="three-cards">
+                <img src="./images/blog_index_2.png">
+                <p>16-09-22</p>
+                <p>Aliquam accumsan sapien dignim la
+                    scelerisque arcu sagittis sed</p>
+                <p>Vestibulum euismod sodales. Suspend
+                    consequat, quis tincidunt molestie.</p>
+            </div>
+            <div class="three-cards">
+                <img src="./images/blog_index_3.png">
+                <p>16-09-22</p>
+                <p>Aliquam accumsan sapien dignim la
+                    scelerisque arcu sagittis sed</p>
+                <p>Vestibulum euismod sodales. Suspend
+                    consequat, quis tincidunt molestie.</p>
+            </div>
+            <div class="three-cards">
+                <img src="./images/blog_index_4.png">
+                <p>16-09-22</p>
+                <p>Aliquam accumsan sapien dignim la
+                    scelerisque arcu sagittis sed</p>
+                <p>Vestibulum euismod sodales. Suspend
+                    consequat, quis tincidunt molestie.</p>
+            </div>
+
+            <button>SEE ALL POST</button>
+        </div>
+
+        <div id="thirteen">
+            <h1>CONTACT US</h1>
+            <form>
+                <input type="text" placeholder="Your Name:">
+                <input type="text" placeholder="Your Email:">
+                <input type="text" placeholder="Message">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

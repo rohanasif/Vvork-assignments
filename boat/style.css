@@ -1,0 +1,161 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
+.sky {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(354deg, rgba(190, 188, 224, 1) 0%, rgba(20, 112, 180, 1) 71%);
+}
+
+.sea {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-image: url(./imgs/sea.png);
+}
+
+
+.boat {
+    right: 0%;
+    position: absolute;
+    width: 500px;
+    animation-name: sail;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes sail {
+    0% {
+        right: -10%;
+        bottom: 30%;
+    }
+
+    25% {
+        bottom: 35%;
+    }
+
+    50% {
+
+        bottom: 30%;
+    }
+
+    75% {
+        bottom: 35%;
+    }
+
+    100% {
+        right: 100%;
+        bottom: 30%;
+    }
+}
+
+.one {
+    animation-delay: 1s;
+}
+
+.two {
+    animation-delay: 2s;
+}
+
+.fish {
+    position: absolute;
+    width: 150px;
+    opacity: 0.7;
+    animation-name: swim;
+    right: -20%;
+    top: 100px;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes swim {
+    0% {
+        right: -20%;
+
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+.birds {
+    position: absolute;
+    right: -40%;
+    animation-name: swim;
+    animation-delay: 5s;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.sun {
+    position: absolute;
+    width: 60px;
+    animation-name: sunrise;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes sunrise {
+    0% {
+        left: -10%;
+    }
+
+    25% {
+        left: 5%;
+    }
+
+    100% {
+        left: -10%;
+    }
+}
+
+.cloud {
+    width: 100px;
+    position: absolute;
+    animation-name: clouds;
+    animation-delay: 31s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.cloud2 {
+    width: 100px;
+    position: absolute;
+    animation-name: clouds;
+    animation-delay: 30s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes clouds {
+    0% {
+        left: -50%;
+    }
+
+    25% {
+        left: 10%;
+    }
+
+    50% {
+        left: 50%;
+    }
+
+    100% {
+        left: -10%;
+    }
+}

@@ -1,0 +1,134 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.name {
+    height: 10vh;
+    background-image: linear-gradient(to right bottom, red, green);
+    border: 1px solid;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+.name>h1 {
+    font-size: 50px;
+    color: yellow;
+    transition-duration: 2s;
+}
+
+.name>h1:hover {
+    transform: skew(20deg);
+    cursor: pointer;
+    color: aqua;
+    transition-duration: 2s;
+}
+
+.bar {
+    width: 400px;
+    height: 8vh;
+    border: 1px solid;
+    border-radius: 20px;
+    position: relative;
+    margin: 30px 450px;
+
+}
+
+.inner-bar {
+    width: 400px;
+    height: 8vh;
+    border-radius: 20px;
+    position: absolute;
+    animation: bar-fill 2s ease-out 1 forwards;
+}
+
+.inner-bar {
+    width: 0%;
+    height: 100%;
+}
+
+@keyframes bar-fill {
+    25% {
+        background-color: purple;
+    }
+
+    50% {
+        background-color: red;
+    }
+
+    75% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: black;
+        width: 90%;
+    }
+
+}
+
+.graph {
+    width: 400px;
+    height: 60vh;
+    border: 1px solid;
+    border-radius: 20px;
+    margin: 30px 450px;
+}
+
+.one {
+    float: left;
+    width: 30px;
+    height: 200px;
+    background-color: aqua;
+    margin-left: 40px;
+    margin-top: 201px;
+}
+
+.two {
+    float: left;
+    width: 30px;
+    height: 150px;
+    background-color: aqua;
+    margin-left: 40px;
+    margin-top: 251px;
+}
+
+.cylinder {
+    position: relative;
+    left: 250px;
+    top: -520px;
+    width: 100px;
+    height: 500px;
+    border: 1px solid;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom left, aqua, green);
+}
+
+.ball {
+    width: 80px;
+    height: 80px;
+    border: 1px solid;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: purple;
+    animation: bounce 2s linear 0s infinite;
+    transition-duration: 1s;
+}
+
+@keyframes bounce {
+    0% {
+        top: 0px;
+        background-color: blue;
+    }
+
+    50% {
+        top: 420px;
+        background-color: red;
+    }
+
+    100% {
+        top: 0px;
+        background-color: blue;
+    }
+}

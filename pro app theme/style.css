@@ -1,0 +1,947 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+}
+
+nav>img {
+    margin-left: 120px;
+    margin-top: 15px;
+}
+
+nav>ul {
+    float: right;
+    list-style: none;
+    margin-right: 92px;
+    margin-top: 8px;
+}
+
+nav li {
+    float: left;
+    padding: 20px;
+}
+
+#first {
+    color: #FFA500;
+    border-bottom: 2px solid #FFA500;
+}
+
+nav li:hover {
+    cursor: pointer;
+    color: #FFA500;
+    border-bottom: 2px solid #FFA500;
+}
+
+.intro {
+    background-image: linear-gradient(rgba(230, 81, 0, 0.25), rgba(230, 81, 0, 0.25)), url(./images/slider-01.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 600px;
+    margin-top: 20px;
+
+}
+
+.intro>h1 {
+    width: 37%;
+    padding-top: 100px;
+    padding-left: 180px;
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+    float: left;
+}
+
+.intro>p {
+    width: 37%;
+    padding-left: 180px;
+    padding-top: 30px;
+    font-size: 22px;
+    color: white;
+    line-height: 35px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    float: left;
+}
+
+.store-btn {
+    margin-top: 70px;
+    padding: 20px 40px;
+    background: rgb(81, 78, 78);
+    border: none;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: white;
+    position: relative;
+    float: left;
+}
+
+.apple {
+    margin-left: 240px;
+}
+
+.google {
+    margin-left: 60px;
+}
+
+.apple::after {
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 0%;
+    background-color: #ff4500;
+    top: 0px;
+    left: 0px;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+.store-btn:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.apple:hover::after {
+    width: 100%;
+    transition-duration: 0.5s;
+}
+
+.google::after {
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 0%;
+    top: 0px;
+    left: 100%;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+.google:hover::after {
+    width: 100%;
+    transition-duration: 0.5s;
+}
+
+.intro img {
+    float: right;
+    height: 500px;
+    width: auto;
+    margin-right: 44px;
+    margin-top: -60px
+}
+
+.btn {
+    margin-left: -8px;
+    margin-top: 240px;
+    float: left;
+    background: transparent;
+    border: none;
+    padding: 10px 12px;
+    font-size: 15px;
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+}
+
+.about-us {
+    margin-top: 85px;
+}
+
+.about-us>h2 {
+    text-align: center;
+    padding-top: 80px;
+    box-sizing: border-box;
+    font-size: 45px;
+}
+
+.about-us>p {
+    text-align: center;
+    padding-left: 275px;
+    padding-right: 275px;
+    padding-top: 30px;
+    color: #999;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.one {
+    width: 100%;
+    height: 275px;
+    margin-top: 50px;
+}
+
+.left-1,
+.left-2 {
+    margin-left: 70px;
+    width: 43%;
+    float: left;
+}
+
+.left-1>img,
+.right-2>img {
+    width: 100%;
+}
+
+.right-1,
+.right-2 {
+    margin-right: 70px;
+    width: 43%;
+    float: right;
+}
+
+.two {
+    width: 100%;
+    height: 275px;
+}
+
+.features {
+    margin-top: 85px;
+}
+
+.right-1 {
+    margin-top: 150px;
+}
+
+.right-2 {
+    margin-top: -100px;
+}
+
+.right-1>p,
+.left-2>p {
+    color: #999;
+}
+
+.features {
+    background-color: #f2f3f5;
+}
+
+.features>h2 {
+    text-align: center;
+    padding-top: 80px;
+    box-sizing: border-box;
+    font-size: 45px;
+}
+
+.features>p {
+    text-align: center;
+    padding-top: 30px;
+    color: #999;
+    font-size: 18px;
+    line-height: 32px;
+    padding-left: 275px;
+    padding-right: 275px;
+}
+
+.customize-cards {
+    background-color: #f2f3f5;
+}
+
+.customize-card {
+    background-color: white;
+    padding-left: 80px;
+    float: left;
+    width: 25%;
+}
+
+.orange {
+    width: 100px;
+    height: 100px;
+    background-color: #ff4500;
+    border: 10px solid brown;
+    transition-duration: 0.5s;
+}
+
+.orange:hover {
+    border: 10px solid #ff4500;
+    transition-duration: 0.5s;
+}
+
+.steps {
+    background: rgb(44, 43, 43);
+    width: 100%;
+    height: 280px;
+    margin-top: 392px;
+}
+
+.step-div {
+    color: white;
+    float: left;
+    position: relative;
+    height: 100%;
+    width: 24.80%;
+}
+
+.step-div:hover {
+    background-color: #ff4500;
+}
+
+.step-div>h2 {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.step-div>h3 {
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 100;
+}
+
+.step-div>p {
+    text-align: center;
+    padding-top: 30px;
+    line-height: 30px;
+}
+
+.screenshots>h2 {
+    text-align: center;
+    padding-top: 80px;
+    box-sizing: border-box;
+    font-size: 45px;
+}
+
+.screenshots>p {
+    text-align: center;
+    padding-top: 30px;
+    color: #999;
+    font-size: 18px;
+    line-height: 32px;
+    padding-left: 275px;
+    padding-right: 275px;
+}
+
+
+.screens>img {
+    height: 85%;
+    width: 30%;
+    margin-top: 60px;
+    margin-left: 40px;
+    border-radius: 40px;
+}
+
+.first-img {
+    transform: skewY(12deg);
+}
+
+.third-img {
+    transform: skewY(-12deg);
+}
+
+.download {
+    background-image: linear-gradient(rgba(230, 81, 0, 0.6), rgba(230, 81, 0, 0.6)), url(./images/d-bg.jpg);
+    background-size: 100% 100%;
+    height: 500px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.left-div {
+    float: left;
+    width: 40%;
+}
+
+.left-div>h2 {
+    color: white;
+    padding-left: 100px;
+    padding-top: 130px;
+    font-size: 42px;
+}
+
+.left-div>p {
+    color: white;
+    padding-left: 100px;
+    padding-top: 50px;
+    line-height: 30px;
+}
+
+.right-div {
+    float: left;
+    height: 80%;
+    width: 40%;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.right-div>img {
+    width: 100%;
+}
+
+.stores {
+    position: relative;
+    height: 14vh;
+    width: 100%;
+}
+
+.stores .store {
+    position: relative;
+    height: 100%;
+    width: 16%;
+    background: rgb(44, 43, 43);
+    float: left;
+    left: 350px;
+    margin-left: 10px
+}
+
+.stores .store:hover {
+    background-color: orangered;
+    transition-duration: 1s;
+}
+
+.stores .store h4 {
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    padding-top: 20px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.stores .store h2 {
+    text-align: center;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    padding-top: 15px
+}
+
+.team {
+    position: relative;
+    height: 130vh;
+    width: 100%;
+}
+
+.team .card {
+    position: absolute;
+    height: 65%;
+    width: 90%;
+    top: 260px;
+    left: 80px
+}
+
+.card .card01 {
+    position: relative;
+    height: 100%;
+    width: 30%;
+    float: left;
+    margin-left: 30px
+}
+
+.card .card01 .img {
+    height: 65%;
+    width: 100%;
+    background-image: url(./images/team_01.jpg);
+    background-size: 100% 100%;
+}
+
+.card .card01 .img2 {
+    background-image: url(./images/team_02.jpg);
+}
+
+.card .card01 .img3 {
+    background-image: url(./images/team_03.jpg);
+}
+
+.card01 .img div {
+    position: absolute;
+    height: 0%;
+    width: 20%;
+    background-color: orangered;
+    right: 0px;
+    top: 0px;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.card01 .img div .icons {
+    color: white;
+    display: block;
+    padding-top: 20px;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+.card01:hover .img div {
+    visibility: visible;
+    transition-duration: .5s;
+    height: 40%;
+}
+
+.card01 .img::after {
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    background-color: #999;
+    opacity: 0.2;
+}
+
+.card01:hover .img::after {
+    height: 65%;
+    bottom: 194px;
+    transition-duration: 1s;
+}
+
+.card01 h2 {
+    text-align: center;
+    padding-top: 15px
+}
+
+.hr {
+    height: 2px;
+    width: 50px;
+    background: orangered;
+    margin-left: 120px;
+    margin-top: 15px;
+    border: 0px
+}
+
+.hr::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 50px;
+    right: 194px
+}
+
+.card01:hover .hr::after {
+    height: 3px;
+    width: 80px;
+    background: orangered;
+    transition-duration: 1s;
+}
+
+
+.hr1 {
+    height: 2px;
+    width: 50px;
+    background: orangered;
+    margin-left: 200px;
+    margin-top: -2px;
+    border: 0px
+}
+
+.hr1::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+}
+
+.card01:hover .hr1::after {
+    height: 3px;
+    width: 80px;
+    background: orangered;
+    transition-duration: 1s;
+}
+
+.card .card01 h4 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    color: orangered;
+    font-weight: 100;
+}
+
+.card .card01 p {
+    text-align: center;
+    color: #999;
+    font-family: "Josefin Sans", sans-serif;
+    padding-top: 17px;
+    line-height: 25px;
+}
+
+.team>h1 {
+    text-align: center;
+    padding-top: 80px;
+    box-sizing: border-box;
+    font-size: 45px;
+}
+
+.team>p {
+    text-align: center;
+    padding-top: 30px;
+    color: #999;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.counters {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url(./images/ben_img_2.jpg);
+    background-size: 140% 150%;
+    top: 260px
+}
+
+.counters .box {
+    position: relative;
+    height: 60%;
+    float: left;
+    margin-left: 140px;
+    left: 90px;
+    top: 100px
+}
+
+.box .icon {
+    position: absolute;
+    height: 33%;
+    width: 100px;
+    font-size: 44px;
+    color: white;
+    background-color: orangered;
+    top: 30px;
+    left: 22px;
+    padding-left: 20px;
+    padding-top: 18px;
+    box-sizing: border-box;
+}
+
+.box>h1 {
+    text-align: center;
+    padding-top: 130px;
+    color: white;
+    font-weight: 100;
+}
+
+.box>h3 {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+    font-weight: 600;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.pricing {
+    position: relative;
+    height: 130vh;
+    width: 100%;
+    background-color: #f2f3f5;
+    top: 270px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.pricing .cards {
+    position: relative;
+    height: 65%;
+    width: 80%;
+    top: 50px;
+    left: 150px
+}
+
+.cards .one {
+    position: relative;
+    height: 100%;
+    width: 30%;
+    /* border: 1px solid red; */
+    float: left;
+    margin-left: 30px;
+}
+
+.cards .one:hover {
+    box-shadow: 0px 0px 10px 1px #333333;
+}
+
+.cards .two {
+    box-shadow: 0px 0px 10px 1px #333333;
+}
+
+.cards .one h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 65px;
+    color: orangered
+}
+
+.cards .one h2 {
+    text-align: center;
+    color: orangered;
+    padding-top: 20px
+}
+
+.cards .one .div {
+    position: relative;
+    height: 8%;
+    width: 50%;
+    margin-top: 25px;
+    margin-left: 90px;
+    background: rgb(44, 43, 43);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px
+}
+
+.cards .one:hover .div {
+    background-color: orangered;
+    transition-duration: 1s;
+}
+
+.one h4 {
+    text-align: center;
+    line-height: 33px;
+    padding-top: 25px
+}
+
+.one .button {
+    position: relative;
+    height: 8%;
+    width: 35%;
+    background: rgb(44, 43, 43);
+    margin-top: 18px;
+    margin-left: 115px;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.one .button::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: orangered;
+    left: 0px;
+    top: 0px;
+    z-index: -2;
+}
+
+.one .button:hover::after {
+    width: 100%;
+    left: 0%;
+    transition-duration: 2s;
+}
+
+.pricing>h1 {
+    text-align: center;
+    padding-top: 80px;
+    box-sizing: border-box;
+    font-size: 45px;
+}
+
+.pricing>p {
+    text-align: center;
+    padding-top: 30px;
+    color: #999;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.clients {
+    position: relative;
+    height: 120vh;
+    width: 100%;
+    top: 275px;
+}
+
+.clients .div {
+    position: relative;
+    height: 50%;
+    width: 50%;
+    box-shadow: 0px 0px 10px 1px #333333;
+    top: 90px;
+    left: 380px;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+.clients .div p {
+    text-align: center;
+}
+
+.clients .div h2 {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.clients .div h3 {
+    text-align: center;
+
+}
+
+.clients .div .img {
+    position: relative;
+    height: 12%;
+    width: 7%;
+    background-image: url(./images/img-2.jpg);
+    background-size: 100% 100%;
+    border: 5px solid orangered;
+    border-radius: 50%;
+    float: left;
+    margin-left: 15px;
+    top: 40px;
+    left: 230px
+}
+
+.clients .div .img2 {
+    background-image: url(./images/img-1.jpg);
+    border: 5px solid rgb(60, 59, 59)
+}
+
+.clients .div .img3 {
+    background-image: url(./images/img-3.jpg);
+    border: 5px solid rgb(60, 59, 59)
+}
+
+.clients>h1 {
+    text-align: center;
+    padding-top: 80px;
+    box-sizing: border-box;
+    font-size: 45px;
+}
+
+.clients>p {
+    text-align: center;
+    padding-top: 30px;
+    color: #999;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.app {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #e65100;
+    top: 300px
+}
+
+.contact {
+    position: relative;
+    height: 150vh;
+    width: 100%;
+    top: 300px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(./images/bg.png);
+    background-size: 100% 100%;
+    font-family: "Josefin Sans", sans-serif
+}
+
+.contact .question {
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background: white;
+    border-radius: 50px;
+    margin-left: 650px;
+    margin-top: 30px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.contact .form {
+    position: relative;
+    height: 75%;
+    width: 100%;
+    /* background:lightblue; */
+    top: 90px;
+    color: white;
+}
+
+.contact .input {
+    height: 90px;
+    width: 40%;
+    position: relative;
+    top: 100px;
+    left: 80px;
+
+    margin-left: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+}
+
+.contact .input-detail {
+    width: 85%;
+    height: 180px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+}
+
+.contact button {
+    position: relative;
+    padding: 18px 40px;
+    background-color: #fff;
+    top: 170px;
+    left: 120px;
+    border: none;
+    color: #999;
+    font-size: 20px;
+}
+
+.contact>h1 {
+    text-align: center;
+    padding-top: 80px;
+    box-sizing: border-box;
+    font-size: 45px;
+}
+
+.newsletter {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    background-color: #1f1f1f;
+    top: 300px;
+    border-bottom: 1px dotted white;
+}
+
+.newsletter h1 {
+    color: white;
+    font-weight: 400;
+}
+
+.newsletter input {
+    position: relative;
+    height: 10%;
+    width: 25%;
+    left: 470px;
+    top: 70px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+
+.newsletter button {
+    position: relative;
+    height: 57px;
+    width: 5%;
+    left: 465px;
+    top: 75px;
+    background-color: orangered;
+    border: none;
+    font-size: 30px;
+    color: white
+}
+
+.newsletter>h1 {
+    text-align: center;
+    padding-top: 80px;
+    box-sizing: border-box;
+    font-size: 45px;
+    color: white;
+}
+
+.newsletter>p {
+    text-align: center;
+    padding-top: 30px;
+    color: #999;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+footer {
+    padding-bottom: 70px;
+    background-color: #1f1f1f;
+    position: relative;
+    height: 25%;
+    margin-top: 300px;
+    border-top: 1px dotted white;
+    text-align: center;
+    padding-top: 60px;
+    box-sizing: border-box;
+    font-size: 18px;
+}

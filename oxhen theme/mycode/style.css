@@ -1,0 +1,236 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.home {
+    background-image: url(./images/home-1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-overlay {
+    background: linear-gradient(131deg, #0f5650, transparent);
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, .5) !important;
+}
+
+.arrow {
+    border-width: 1px;
+    box-shadow: 0 5px rgb(0 0 0 / 15%);
+}
+
+.heading::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 119, 109, .8);
+    height: 2px;
+    width: 79px;
+    left: 50%;
+    bottom: -12px;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+.heading::after {
+    content: "";
+    position: absolute;
+    border: 9px solid #fff;
+    left: 50%;
+    border-bottom: 11px solid #00776d;
+    bottom: -16px;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+.feature-card::before {
+    content: "";
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: all .5s ease;
+    z-index: -1;
+}
+
+.feature-card:hover {
+    color: rgba(0, 119, 109, .9);
+}
+
+.feature-card:hover::before {
+    background-color: rgba(0, 119, 109, .2);
+    height: 100%;
+    width: 100%;
+}
+
+.feature-heading::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 119, 109, .4);
+    height: 50px;
+    width: 50px;
+    bottom: -14px;
+    border-radius: 100% 38% 100% 51%/45% 49% 100% 100%;
+    z-index: -1;
+    transform: translateX(-50%);
+    height: 38px;
+    width: 38px;
+    bottom: 0px;
+    left: 15px;
+}
+
+.li {
+    border-bottom: 1px solid rgba(0, 119, 109, .09);
+}
+
+.li:hover {
+    background: rgba(0, 119, 109, .2);
+    border-radius: 8px;
+}
+
+.accordion-item:first-of-type {
+    border-top-left-radius: 0.25rem rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.accordion-item {
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.bg-overlay-2 {
+    position: relative;
+    background: linear-gradient(rgba(37, 45, 49, 0.7), rgba(37, 45, 49, 0.7)), url(./images/cta.jpg) fixed no-repeat;
+    color: #fff;
+}
+
+.reviews {
+    background: rgba(187, 186, 186, .08);
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.pricing .pricing-box .card {
+    border-radius: 9px 9px 0 0;
+    background: transparent;
+}
+
+.pricing .pricing-box .card .card-body {
+    border-bottom: 1px solid rgba(131, 147, 147, .352);
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .home-btn {
+        display: block !important;
+    }
+
+    .typewrite {
+        display: inline-block !important;
+    }
+
+    .col-lg-4 {
+        margin-top: 1.5rem !important;
+    }
+
+    .feature-card {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    .marketing {
+        margin-top: 3rem !important;
+        margin-bottom: 3rem !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .col-lg-4 {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    nav {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        padding: 0 0.5rem;
+    }
+
+    .col-lg-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+
+    .col-lg-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    .col-lg-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .card {
+        margin-bottom: 0 !important;
+    }
+
+    .col-lg-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%;
+    }
+
+    .col-lg-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+}
+
+@media(max-width:992px) {
+
+
+    .navbar-collapse {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media(max-width: 576px) {}

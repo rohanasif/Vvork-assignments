@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    margin: 60px auto;
+    width: 40vw;
+    height: 40vh;
+    border: 2px solid;
+    background-image: url(./images/about-01.png);
+    background-size: 100% 100%;
+    animation-name: bg-change;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+
+}
+
+@keyframes bg-change {
+    0% {
+        background-image: url(./images/about-02.png);
+    }
+
+    25% {
+        background-image: url(./images/app-mobile.png);
+    }
+
+    50% {
+        background-image: url(./images/app_iphone_01\ \(1\).png);
+    }
+
+    75% {
+        background-image: url(./images/ben_img_2.jpg);
+    }
+
+    100% {
+        background-image: url(./images/bg.png);
+    }
+}

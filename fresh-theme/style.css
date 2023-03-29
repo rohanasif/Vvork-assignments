@@ -1,0 +1,51 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    padding: 15px 100px;
+    background-color: black;
+}
+
+.nav>img {
+    width: 130px;
+    height: 30px;
+}
+
+.nav>img:hover {
+    cursor: pointer;
+}
+
+.nav>ul {
+    list-style: none;
+    display: flex;
+    margin-top: 6px;
+}
+
+.nav>ul>li {
+    color: white;
+    margin-left: 20px;
+}
+
+.nav i {
+    margin-left: 10px;
+}
+
+.inner-div {
+    display: flex;
+}
+
+.mainli {
+    position: relative;
+}
+
+.dropdown {
+    top: 39px;
+    position: absolute;
+    padding: 20px;
+    background-color: aqua;
+}

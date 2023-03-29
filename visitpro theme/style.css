@@ -1,0 +1,251 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav>ul>li {
+    color: #6c757d;
+    transition-duration: 0.5s;
+}
+
+.nav>ul>li:hover {
+    color: #343a40;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.banner {
+    background-image: linear-gradient(rgba(25, 0, 255, 0.8), rgba(25, 0, 255, 0.6)), url(./images/banner-1.jpg);
+}
+
+.para {
+    animation-name: para-slide;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.h1 {
+    animation-name: h1-slide;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.div {
+    /* animation-name: div-slide; */
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.div:hover {
+    cursor: pointer;
+}
+
+.div::before {
+    content: "";
+    top: 0px;
+    left: 0%;
+    background-color: black;
+    visibility: hidden;
+    transition-duration: 0.8s;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.div::after {
+    background-color: black;
+    top: 0px;
+    left: 50%;
+    content: "";
+    visibility: hidden;
+    transition-duration: 0.8s;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.div:hover::before {
+    visibility: visible;
+    transition-duration: 0.8s;
+    left: 50%;
+    width: 0%;
+    height: 100%;
+    opacity: 0
+}
+
+.div:hover::after {
+    visibility: visible;
+    transition-duration: 0.8s;
+    width: 0%;
+    height: 100%;
+    opacity: 0;
+}
+
+@keyframes para-slide {
+    0% {
+        top: -50px;
+        opacity: 0;
+    }
+
+    50% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        top: -50px;
+        opacity: 0;
+    }
+}
+
+@keyframes h1-slide {
+    0% {
+        right: -50px;
+        opacity: 0;
+    }
+
+    50% {
+        right: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        right: -50px;
+        opacity: 0;
+    }
+}
+
+@keyframes div-slide {
+    0% {
+        bottom: -50px;
+        opacity: 0;
+    }
+
+    50% {
+        bottom: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        bottom: -50px;
+        opacity: 0;
+    }
+}
+
+.card::before {
+    border: 2px solid red;
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "";
+    width: 0%;
+    height: 0%;
+    transition-duration: 0.5s;
+    border-radius: 0.5rem;
+}
+
+.card:hover::before {
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.5s;
+}
+
+.circle::before {
+    border-radius: 50%;
+    width: 0%;
+    height: 0%;
+    content: "";
+    background-color: red;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition-duration: 0.5s;
+}
+
+.card:hover .circle::before {
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.5s;
+}
+
+.overflow-image {
+    border-radius: 5px;
+}
+
+.overflow-image:hover .inner {
+    scale: 1.08;
+    transition-duration: 0.8s;
+}
+
+.inner {
+    transition-duration: 0.8s;
+}
+
+.polygon {
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 78% 38%, 0% 38%);
+    box-shadow: 0 0 40px rgb(0 0 0 / 15%);
+}
+
+.img-div::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.circle2::before {
+    border-radius: 50%;
+    width: 0%;
+    height: 0%;
+    content: "";
+    background-color: red;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition-duration: 0.5s;
+}
+
+.card2:hover .circle2::before {
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.5s;
+}
+
+.wr1 {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.226), rgba(0, 0, 0, 0.349)), url(./coaching-1.jpg);
+    background-size: 100% 100%;
+}
+
+.wr2 {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.226), rgba(0, 0, 0, 0.349)), url(./coaching-2.jpg);
+    background-size: 100% 100%;
+}
+
+.wr3 {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.226), rgba(0, 0, 0, 0.349)), url(./coaching-3.jpg);
+    background-size: 100% 100%;
+}
+
+.wr4 {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.226), rgba(0, 0, 0, 0.349)), url(./coaching-4.jpg);
+    background-size: 100% 100%;
+}
+
+.as {
+    position: relative;
+    overflow: hidden;
+}
+
+.as1 {
+    position: absolute;
+    top: 270px;
+}
+
+.as:hover .as1 {
+    top: 150px;
+    transition-duration: 2s;
+}
