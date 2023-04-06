@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .image-div,
+        .btn-div {
+            display: flex;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+
+        #img-2,
+        #img-3 {
+            display: none;
+        }
+
+        .btn-div {
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 16px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="image-div">
+            <img id="img-1" src="./jon-parry-C8eSYwQkwHw-unsplash.jpg">
+            <img id="img-2" src="./marcel-l-PQewPJqNKwQ-unsplash.jpg">
+            <img id="img-3" src="./tengyart-kSvpTrfhaiU-unsplash.jpg">
+        </div>
+        <div class="btn-div">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    const img1 = document.getElementById("img-1");
+    const img2 = document.getElementById("img-2");
+    const img3 = document.getElementById("img-3");
+    const btn = document.querySelectorAll("button");
+    btn.forEach((el) => {
+        el.addEventListener("click", (e) => {
+            var val = e.target.innerHTML;
+            if (val === "1") {
+                img1.style.display = "inline-block";
+                img2.style.display = "none";
+                img3.style.display = "none";
+            }
+            else if (val === "2") {
+                img1.style.display = "none";
+                img2.style.display = "inline-block";
+                img3.style.display = "none";
+            }
+            else if (val === "3") {
+                img1.style.display = "none";
+                img2.style.display = "none";
+                img3.style.display = "inline-block";
+            }
+        })
+    })
+</script>
+
+</html>
