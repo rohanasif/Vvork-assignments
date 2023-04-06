@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            display: block;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./jon-parry-C8eSYwQkwHw-unsplash.jpg" alt="">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+</body>
+<script>
+    const img = document.getElementsByTagName("img")[0];
+    const btn = document.querySelectorAll("button");
+    btn.forEach((el) => {
+        el.addEventListener("click", (e) => {
+            var val = e.target.innerHTML;
+            if (val === "1") {
+                img.setAttribute("src", "./jon-parry-C8eSYwQkwHw-unsplash.jpg");
+            }
+            else if (val === "2") {
+                img.setAttribute("src", "./marcel-l-PQewPJqNKwQ-unsplash.jpg")
+            }
+            else if (val === "3") {
+                img.setAttribute("src", "./tengyart-kSvpTrfhaiU-unsplash.jpg")
+            }
+        })
+    })
+</script>
+
+</html>
