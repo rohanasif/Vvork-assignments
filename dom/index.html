@@ -9,10 +9,38 @@
 </head>
 
 <body>
-
+    <h1>0</h1>
+    <button>Inc</button>
+    <button>Dec</button>
+    <button>Reset</button>
 </body>
 <script>
-
+    const h1 = document.getElementsByTagName("h1")[0];
+    const btn = document.querySelectorAll("button");
+    var count = 0;
+    btn.forEach((el) => {
+        el.addEventListener("click", (e) => {
+            const val = e.target.innerHTML
+            if (val === "Inc") {
+                count++;
+                if (count > 10) {
+                    count = 0;
+                }
+            }
+            else if (val === "Dec") {
+                if (count > 0) {
+                    count--;
+                }
+                else {
+                    count = 0;
+                }
+            }
+            else if (val == "Reset") {
+                count = 0;
+            }
+            h1.innerHTML = count;
+        })
+    })
 </script>
 
 </html>
