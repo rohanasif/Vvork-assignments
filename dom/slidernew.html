@@ -24,19 +24,10 @@
 </body>
 <script>
     const img = document.getElementsByTagName("img")[0];
-    const btn = document.querySelectorAll("button");
-    btn.forEach((el) => {
-        el.addEventListener("click", (e) => {
-            var val = e.target.innerHTML;
-            if (val === "1") {
-                img.src = "./jon-parry-C8eSYwQkwHw-unsplash.jpg"
-            }
-            else if (val === "2") {
-                img.src = "./marcel-l-PQewPJqNKwQ-unsplash.jpg"
-            }
-            else if (val === "3") {
-                img.src = "./tengyart-kSvpTrfhaiU-unsplash.jpg";
-            }
+    const btns = document.querySelectorAll("button");
+    btns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+
         })
     })
 </script>
