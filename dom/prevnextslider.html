@@ -1,15 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            height: 60vh;
+            width: 70vw;
+            position: relative;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .slider {
+            width: 300%;
+            height: 90%;
+            position: relative;
+            display: flex;
+        }
+
+        .pic {
+            height: 100%;
+            width: 33.3333333333%;
+            background-size: 100% 100%;
+            background-image: url(./jon-parry-C8eSYwQkwHw-unsplash.jpg);
+        }
+
+        .pic1 {
+            background-image: url(./marcel-l-PQewPJqNKwQ-unsplash.jpg);
+        }
+
+        .pic2 {
+            background-image: url(./tengyart-kSvpTrfhaiU-unsplash.jpg);
+        }
+
+        button {
+            padding: 10px 5px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="slider">
+            <div class="pic"></div>
+            <div class="pic pic1"></div>
+            <div class="pic pic2"></div>
+        </div>
+        <div style="width:20vw; margin:0px auto; display:flex; justify-content: space-evenly;">
+            <button class="left">Left</button>
+            <button class="right">Right</button>
+        </div>
+
+    </div>
 </body>
 <script>
-    
+    var left = document.getElementsByTagName("button")[0];
+    var right = document.getElementsByTagName("button")[1];
+    var slider = document.querySelector(".slider");
+    var count = 0;
+    right.addEventListener("click", () => {
+        if (count < 2) {
+            count++;
+        }
+        else {
+            count = 0;
+        }
+        slider.style.left = `${count * -100}%`;
+    });
+
+    left.addEventListener("click", () => {
+        if (count > 0) {
+            count--;
+        }
+        else {
+            count = 2;
+        }
+        slider.style.left = `${count * -100}%`;
+    });
 </script>
+
 </html>
