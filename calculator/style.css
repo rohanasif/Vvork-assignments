@@ -18,8 +18,12 @@ input {
     padding: 20px;
     width: 200px;
     height: 50px;
-    font-size: 50px;
+    font-size: 25px;
     box-shadow: 5px 5px 10px 1px black;
+}
+
+input:focus{
+    outline: none;
 }
 
 .btns {
@@ -29,7 +33,7 @@ input {
 
 }
 
-.btn-2{
+.btn-2 {
     width: 100px;
 }
 
