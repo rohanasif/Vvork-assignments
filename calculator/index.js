@@ -15,7 +15,7 @@ btns.forEach((btnsItem) => {
         else if (e.target.innerHTML === "C") {
             input.value = "";
         }
-        else if (e.target.innerHTML === "backspace") {
+        else if (e.target.innerHTML === "Del") {
             input.value = input.value.slice(0, -1);
         }
     })
