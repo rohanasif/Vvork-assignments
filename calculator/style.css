@@ -6,8 +6,9 @@
 .main {
     border-radius: 20px;
     width: fit-content;
-    background-color: #dddddd;
-    height: 510px;
+    background-color: #634faa;
+    height: 425px;
+    box-shadow: 5px 5px 10px 1px black;
 }
 
 input {
@@ -18,15 +19,23 @@ input {
     width: 200px;
     height: 50px;
     font-size: 50px;
+    box-shadow: 5px 5px 10px 1px black;
 }
 
 .btns {
     width: 212px;
     height: 400px;
     margin: 0px auto;
+
+}
+
+.btn-2{
+    width: 100px;
 }
 
 .btn-row {
+    display: flex;
+    justify-content: space-between;
     height: 65px;
     width: 212px;
 }
@@ -40,6 +49,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    box-shadow: 5px 5px 10px 1px black;
 }
 
 button:hover {
