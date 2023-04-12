@@ -59,6 +59,10 @@ stopbtn.addEventListener("click", () => {
 
 resetbtn.addEventListener("click", () => {
     clearInterval(intervalId);
+    milliseconds = 0;
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
     document.getElementById("milliseconds").innerHTML = "00";
     document.getElementById("seconds").innerHTML = "00";
     document.getElementById("minutes").innerHTML = "00";
@@ -66,3 +70,4 @@ resetbtn.addEventListener("click", () => {
     startbtn.disabled = false;
     stopbtn.disabled = true;
 });
+
