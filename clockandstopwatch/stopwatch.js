@@ -9,7 +9,7 @@ let intervalId;
 
 const interval = () => {
     milliseconds++;
-    if (milliseconds >= 1000) {
+    if (milliseconds >= 100) {
         milliseconds = 0;
         seconds++;
         if (seconds >= 60) {
@@ -37,16 +37,16 @@ const interval = () => {
         }
     }
     if (milliseconds < 10) {
-        document.getElementById("milliseconds").innerHTML = "00" + milliseconds;
-    } else if (milliseconds < 100) {
         document.getElementById("milliseconds").innerHTML = "0" + milliseconds;
+    } else if (milliseconds < 100) {
+        document.getElementById("milliseconds").innerHTML = milliseconds;
     } else {
         document.getElementById("milliseconds").innerHTML = milliseconds.toString();
     }
 };
 
 startbtn.addEventListener("click", () => {
-    intervalId = setInterval(interval, 1);
+    intervalId = setInterval(interval, 10);
     startbtn.disabled = true;
     stopbtn.disabled = false;
 });
@@ -59,7 +59,7 @@ stopbtn.addEventListener("click", () => {
 
 resetbtn.addEventListener("click", () => {
     clearInterval(intervalId);
-    document.getElementById("milliseconds").innerHTML = "000";
+    document.getElementById("milliseconds").innerHTML = "00";
     document.getElementById("seconds").innerHTML = "00";
     document.getElementById("minutes").innerHTML = "00";
     document.getElementById("hours").innerHTML = "00";
