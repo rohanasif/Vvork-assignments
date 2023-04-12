@@ -70,4 +70,3 @@ resetbtn.addEventListener("click", () => {
     startbtn.disabled = false;
     stopbtn.disabled = true;
 });
-
