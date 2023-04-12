@@ -18,13 +18,31 @@ const interval = () => {
             if (minutes >= 60) {
                 minutes = 0;
                 hours++;
-                document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+                if (hours < 10) {
+                    document.getElementById("hours").innerHTML = "0" + hours;
+                } else {
+                    document.getElementById("hours").innerHTML = hours.toString();
+                }
             }
-            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            if (minutes < 10) {
+                document.getElementById("minutes").innerHTML = "0" + minutes;
+            } else {
+                document.getElementById("minutes").innerHTML = minutes.toString();
+            }
         }
-        document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+        if (seconds < 10) {
+            document.getElementById("seconds").innerHTML = "0" + seconds;
+        } else {
+            document.getElementById("seconds").innerHTML = seconds.toString();
+        }
     }
-    document.getElementById("milliseconds").innerHTML = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
+    if (milliseconds < 10) {
+        document.getElementById("milliseconds").innerHTML = "00" + milliseconds;
+    } else if (milliseconds < 100) {
+        document.getElementById("milliseconds").innerHTML = "0" + milliseconds;
+    } else {
+        document.getElementById("milliseconds").innerHTML = milliseconds.toString();
+    }
 };
 
 startbtn.addEventListener("click", () => {
