@@ -545,3 +545,9 @@ tbody {
     display: inline-block;
     color: #c0c0c0;
 }
+
+.dark-mode{
+    color:white !important;
+    background-color: #363636 !important;
+}
+
