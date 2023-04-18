@@ -1,0 +1,55 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+nav {
+
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    color: white;
+
+
+}
+
+ul {
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+ul>li {
+    cursor: pointer;
+}
+
+div {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    right: 30px;
+}
+
+i {
+    font-size: 32px;
+}
+
+section {
+    height: 200vh;
+}
+
+@media only screen and (max-width:600px) {
+    div {
+        display: block;
+    }
+
+    ul {
+        display: none;
+    }
+}

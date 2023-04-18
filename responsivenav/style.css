@@ -2,3 +2,20 @@
     padding: 0px;
     margin: 0px;
 }
+
+.burgermenu {
+    width: 20%;
+    height: 0%;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle {
+    visibility: visible;
+    height: auto;
+}
