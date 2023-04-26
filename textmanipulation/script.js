@@ -29,7 +29,13 @@ btns.forEach(btn => {
             text.select();
         }
         else if (btnValue === "remove space") {
-            textValue = textValue.replace(/\s/g, "");
+            let newText = "";
+            for (let i = 0; i < textValue.length; i++) {
+                if (textValue[i] !== " " && textValue[i] !== "\t" && textValue[i] !== "\n") {
+                    newText += textValue[i];
+                }
+            }
+            textValue = newText;
         }
         else if (btnValue === "backspace") {
             textValue = textValue.substring(0, textValue.length - 1);
@@ -38,11 +44,11 @@ btns.forEach(btn => {
             textValue = textValue.split(" ").length
         }
 
-        else if (btnValue === "total characters"){
+        else if (btnValue === "total characters") {
             let count = 0;
             textValue = textValue.split("");
-            if(textValue === " "){
-                
+            if (textValue === " ") {
+
             }
         }
 
