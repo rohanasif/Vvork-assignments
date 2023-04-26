@@ -1,0 +1,40 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./yvette-de-wit-NYrVisodQ2M-unsplash.jpg);
+    background-size: cover;
+}
+
+.keys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 20vh;
+    margin: 200px auto;
+}
+
+.key {
+    border: 1px solid black;
+    padding: 20px;
+    background-color: aquamarine;
+    text-align: center;
+}
+
+.key:hover {
+    cursor: pointer;
+}
+
+kbd {
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.playing {
+    transform: scale(1.2);
+}
