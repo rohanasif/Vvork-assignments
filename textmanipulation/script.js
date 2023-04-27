@@ -44,11 +44,14 @@ btns.forEach(btn => {
 
         else if (btnValue === "total characters") {
             let count = 0;
-            textValue = textValue.split("");
-            if (textValue === " ") {
-
+            for (let i = 0; i < textValue.length; i++) {
+                if (textValue[i] !== " ") {
+                    count++;
+                }
             }
+            textValue = count.toString();
         }
+
 
         text.value = textValue;
     });
