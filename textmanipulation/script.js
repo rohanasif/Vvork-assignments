@@ -25,8 +25,6 @@ btns.forEach(btn => {
         else if (btnValue === "copy") {
             text.select();
             document.execCommand("copy");
-            window.getSelection().removeAllRanges();
-            text.select();
         }
         else if (btnValue === "remove space") {
             let newText = "";
