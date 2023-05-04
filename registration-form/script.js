@@ -22,12 +22,12 @@ submitBtn.addEventListener("click", () => {
 const allData = JSON.parse(localStorage.getItem("data"));
 if (allData) {
   for (let person of allData) {
-    if (person.name !== "" || person.email !== "" || person.password !== "") {
+    if (person.name !== "" && person.email !== "" && person.password !== "") {
       tbody.innerHTML += `<tr>
-                                    <td>${person.name}</td>
-                                    <td>${person.email}</td>
-                                    <td><button class="editBtn">Edit</button><td>
-                                </tr>`;
+                            <td>${person.name}</td>
+                            <td>${person.email}</td>
+                            <td><button class="editBtn">Edit</button><td>
+                          </tr>`;
     }
   }
 }
