@@ -8,7 +8,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     height: 100vh;
 }
 
@@ -24,6 +23,9 @@ input {
 }
 
 div {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
     list-style: none;
 }
 
