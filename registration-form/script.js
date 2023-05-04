@@ -26,7 +26,7 @@ if (allData) {
       tbody.innerHTML += `<tr>
                                     <td>${person.name}</td>
                                     <td>${person.email}</td>
-                                    <td><button>Edit</button><td>
+                                    <td><button class="editBtn">Edit</button><td>
                                 </tr>`;
     }
   }
