@@ -3,17 +3,22 @@ var btn = document.querySelector('button')
 var div = document.querySelector('div')
 var updateBtn = document.getElementById('btn')
 btn.addEventListener('click', () => {
-    var a = JSON.parse(localStorage.getItem('data'))
-    if (a) {
-        a.push(inp.value)
-        localStorage.setItem('data', JSON.stringify(a))
+    if (inp.value !== "") {
+        var a = JSON.parse(localStorage.getItem('data'))
+        if (a) {
+            a.push(inp.value)
+            localStorage.setItem('data', JSON.stringify(a))
+        }
+        else {
+            localStorage.setItem('data', JSON.stringify([inp.value]))
+
+        }
+        inp.value = ""
+        showData()
     }
     else {
-        localStorage.setItem('data', JSON.stringify([inp.value]))
-
+        alert("Enter something first")
     }
-    inp.value = ""
-    showData()
 })
 
 function showData() {
