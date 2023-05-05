@@ -73,6 +73,7 @@ function handleDel(i) {
 }
 
 var handleIndex = -1;
+
 function handleEdit(i) {
   var a = JSON.parse(localStorage.getItem("data"));
   inputs.forEach((input) => {
@@ -89,12 +90,16 @@ function handleEdit(i) {
 
 updateBtn.addEventListener("click", () => {
   var a = JSON.parse(localStorage.getItem("data"));
-  a[handleIndex].name = inputs[0].value;
-  a[handleIndex].email = inputs[1].value;
-  a[handleIndex].password = inputs[2].value;
-  localStorage.setItem("data", JSON.stringify(a));
-  showData();
-  inputs.forEach((input) => {
-    input.value = "";
-  });
+  if (handleIndex >= 0) {
+    // check if there is a valid index selected
+    a[handleIndex].name = inputs[0].value;
+    a[handleIndex].email = inputs[1].value;
+    a[handleIndex].password = inputs[2].value;
+    localStorage.setItem("data", JSON.stringify(a));
+    showData();
+    inputs.forEach((input) => {
+      input.value = "";
+    });
+    handleIndex = -1;
+  }
 });
