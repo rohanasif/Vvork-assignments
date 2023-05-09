@@ -75,6 +75,8 @@ function handleDel(i) {
 var handleIndex = -1;
 
 function handleEdit(i) {
+	updateBtn.style.display = "inline-block";
+	submitBtn.style.display = "none";
 	var a = JSON.parse(localStorage.getItem("data"));
 	inputs.forEach((input) => {
 		if (input.type === "text") {
@@ -101,4 +103,6 @@ updateBtn.addEventListener("click", () => {
 		});
 		handleIndex = -1;
 	}
+	updateBtn.style.display = "none";
+	submitBtn.style.display = "inline-block";
 });
