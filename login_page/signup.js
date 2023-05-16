@@ -29,6 +29,7 @@ signUpBtn.addEventListener("click", (e) => {
       };
       allData.push(userData);
       localStorage.setItem("data", JSON.stringify(allData));
+      alert("You're signed up");
     } else {
       alert("Passwords don't match");
     }
