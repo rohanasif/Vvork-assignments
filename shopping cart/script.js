@@ -24,6 +24,7 @@ function showData(d) {
 
 function handleAdd(index) {
   var obj = {
+    id: mydata[index].id,
     image: mydata[index].image,
     title: mydata[index].title,
     price: mydata[index].price,
@@ -32,27 +33,19 @@ function handleAdd(index) {
   if (x) {
     x.push(obj);
     localStorage.setItem("data", JSON.stringify(x));
-    var div = document.createElement("div");
-    div.className = "item";
-    div.innerHTML = `
-                  <img class="card-img" src="${obj.image}" alt="Card image">
-                  <h5 class="card-title">${obj.title}</h5>
-                  <h5 class="card-price">$${obj.price}</h5>
-                  <button onclick= "handleDel(${index})" class="delBtns">Delete</button>
-    `;
-    cart.appendChild(div);
   } else {
     localStorage.setItem("data", JSON.stringify([obj]));
-    var div = document.createElement("div");
-    div.className = "item";
-    div.innerHTML = `
-                  <img class="card-img" src="${obj.image}" alt="Card image">
-                  <h5 class="card-title">${obj.title}</h5>
-                  <h5 class="card-price">$${obj.price}</h5>
-                  <button onclick= "handleDel(${index})" class="delBtns">Delete</button>
-    `;
-    cart.appendChild(div);
   }
+  var div = document.createElement("div");
+  div.className = "item";
+  div.id = "item-" + obj.id; // Set the div id as item-{productId}
+  div.innerHTML = `
+              <img class="card-img" src="${obj.image}" alt="Card image">
+              <h5 class="card-title">${obj.title}</h5>
+              <h5 class="card-price">$${obj.price}</h5>
+              <button onclick= "handleDel(${obj.id})" class="delBtns">Delete</button>
+  `;
+  cart.appendChild(div);
 }
 
 cartIcon.addEventListener("click", () => {
@@ -60,14 +53,13 @@ cartIcon.addEventListener("click", () => {
   cart.classList.toggle("show");
 });
 
-function handleDel(index) {
+function handleDel(id) {
   var x = JSON.parse(localStorage.getItem("data"));
-  x.splice(index, 1);
-  localStorage.setItem("data", JSON.stringify(x));
-  const items = document.querySelectorAll(".item");
-  items.forEach((item, i) => {
-    if (i === index) {
-      item.remove();
-    }
-  });
+  var index = x.findIndex((item) => item.id === id); // find the item to delete by id
+  if (index > -1) {
+    x.splice(index, 1);
+    localStorage.setItem("data", JSON.stringify(x));
+    var itemElement = document.getElementById("item-" + id); // get the div element by id
+    itemElement.remove();
+  }
 }
