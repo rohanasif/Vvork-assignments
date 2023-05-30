@@ -15,9 +15,16 @@
   <body>
     <nav class="flex justify-between p-8 bg-slate-800">
       <h1 class="text-3xl">Shopping Cart</h1>
-      <i class="text-3xl fa-solid fa-cart-shopping cursor-pointer"></i>
+      <i
+        class="text-3xl fa-solid fa-cart-shopping cursor-pointer"
+        id="cart-icon"
+      ></i>
     </nav>
     <div id="container" class="flex flex-wrap w-full justify-center"></div>
+    <div
+      id="cart"
+      class="hide absolute top-[100px] right-0 z-[1] bg-slate-800 w-[fit-content] h-[fit-content]"
+    ></div>
     <script src="./script.js"></script>
   </body>
 </html>

@@ -27,9 +27,18 @@
   font-weight: bold;
 }
 
-.addBtn {
+.addBtns,
+.delBtns {
   background-color: blue;
   color: #fff;
   padding: 10px;
   margin-bottom: 20px;
+}
+
+.show {
+  /* display: flex; */
+}
+
+.hide {
+  display: none;
 }
