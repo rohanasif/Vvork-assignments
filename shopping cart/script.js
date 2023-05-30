@@ -38,7 +38,7 @@ function handleAdd(index) {
                   <img class="card-img" src="${obj.image}" alt="Card image">
                   <h5 class="card-title">${obj.title}</h5>
                   <h5 class="card-price">$${obj.price}</h5>
-                  <button onclick= "handleDel(${obj.index})" class="delBtns">Delete</button>
+                  <button onclick= "handleDel(${index})" class="delBtns">Delete</button>
     `;
     cart.appendChild(div);
   } else {
@@ -64,4 +64,10 @@ function handleDel(index) {
   var x = JSON.parse(localStorage.getItem("data"));
   x.splice(index, 1);
   localStorage.setItem("data", JSON.stringify(x));
+  const items = document.querySelectorAll(".item");
+  items.forEach((item, i) => {
+    if (i === index) {
+      item.remove();
+    }
+  });
 }
