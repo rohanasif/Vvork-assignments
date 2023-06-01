@@ -8,6 +8,7 @@ fetch("https://fakestoreapi.com/products")
   .catch((error) => console.log(error));
 var mydata;
 function showData(d) {
+  handle();
   mydata = d;
   d.forEach((item, index) => {
     const card = document.createElement("div");
@@ -62,10 +63,15 @@ function handleDel(id) {
     localStorage.setItem("data", JSON.stringify(x));
     var itemElement = document.getElementById("item-" + id); // get the div element by id
     itemElement.remove();
+    handle();
   }
 }
 let counter = document.getElementById("counter");
 function handle() {
   var a = JSON.parse(localStorage.getItem("data"));
-  counter.innerHTML = a.length;
+  if (a.length > 0) {
+    counter.innerHTML = a.length;
+  } else {
+    counter.innerHTML = "";
+  }
 }
