@@ -46,6 +46,7 @@ function handleAdd(index) {
               <button onclick= "handleDel(${obj.id})" class="delBtns">Delete</button>
   `;
   cart.appendChild(div);
+  handle();
 }
 
 cartIcon.addEventListener("click", () => {
@@ -62,4 +63,9 @@ function handleDel(id) {
     var itemElement = document.getElementById("item-" + id); // get the div element by id
     itemElement.remove();
   }
+}
+let counter = document.getElementById("counter");
+function handle() {
+  var a = JSON.parse(localStorage.getItem("data"));
+  counter.innerHTML = a.length;
 }
