@@ -8,6 +8,7 @@ fetch("https://fakestoreapi.com/products")
   .catch((error) => console.log(error));
 
 var mydata;
+
 function showData(d) {
   handle();
   mydata = d;
@@ -47,6 +48,7 @@ function showData(d) {
         <img class="card-img" src="${item.image}" alt="Card image">
         <h5 class="card-title">${item.title}</h5>
         <h5 class="card-price">$${item.price}</h5>
+        <div class="item-counter">${item.count}</div>
         <button onclick="handleDel(${item.id})" class="delBtns">Delete</button>
       `;
       cart.appendChild(div);
@@ -60,25 +62,20 @@ function handleAdd(index) {
     image: mydata[index].image,
     title: mydata[index].title,
     price: mydata[index].price,
+    count: 1, // Set the initial count to 1
   };
   var x = JSON.parse(localStorage.getItem("data"));
   if (x) {
-    // Check if the item already exists in localStorage
     var existingItem = x.find((item) => item.id === obj.id);
     if (existingItem) {
-      // If the item already exists, increase its count by 1
-      existingItem.count++;
+      existingItem.count++; // Increment the count of the existing item
     } else {
-      // If the item doesn't exist, add it to localStorage with a count of 1
-      obj.count = 1;
       x.push(obj);
     }
-    localStorage.setItem("data", JSON.stringify(x));
   } else {
-    // If localStorage is empty, add the item with a count of 1
-    obj.count = 1;
-    localStorage.setItem("data", JSON.stringify([obj]));
+    x = [obj];
   }
+  localStorage.setItem("data", JSON.stringify(x));
   updateCart();
 }
 
@@ -91,23 +88,18 @@ function handleDel(id) {
   var x = JSON.parse(localStorage.getItem("data"));
   var index = x.findIndex((item) => item.id === id);
   if (index > -1) {
-    // Decrement the count of the item by one
-    x[index].count--;
+    x[index].count--; // Decrement the count of the item
 
-    // If the count reaches zero, remove the item from the cart
     if (x[index].count === 0) {
-      x.splice(index, 1);
+      x.splice(index, 1); // Remove the item if count reaches zero
       var itemElement = document.getElementById("item-" + id);
       itemElement.remove();
     }
 
     localStorage.setItem("data", JSON.stringify(x));
-    handle();
+    updateCart();
 
-    // Update the counter element for the specific item
     var counterElement = document.querySelector(`#item-${id} .item-counter`);
-
-    // Check if the item still exists in the cart
     if (counterElement) {
       counterElement.textContent = x[index] ? x[index].count : 0;
     }
@@ -157,30 +149,4 @@ function updateCart() {
     });
   }
   handle();
-}
-
-// Add the updateCart() call in the handleAdd() function
-
-function handleAdd(index) {
-  var obj = {
-    id: mydata[index].id,
-    image: mydata[index].image,
-    title: mydata[index].title,
-    price: mydata[index].price,
-  };
-  var x = JSON.parse(localStorage.getItem("data"));
-  if (x) {
-    var existingItem = x.find((item) => item.id === obj.id);
-    if (existingItem) {
-      existingItem.count++;
-    } else {
-      obj.count = 1;
-      x.push(obj);
-    }
-    localStorage.setItem("data", JSON.stringify(x));
-  } else {
-    obj.count = 1;
-    localStorage.setItem("data", JSON.stringify([obj]));
-  }
-  updateCart();
 }
