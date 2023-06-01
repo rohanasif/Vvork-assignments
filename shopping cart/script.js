@@ -108,9 +108,13 @@ function handleDel(id) {
 
 let counter = document.getElementById("counter");
 function handle() {
-  var a = JSON.parse(localStorage.getItem("data"));
-  if (a && a.length > 0) {
-    counter.innerHTML = a.length;
+  var storedData = JSON.parse(localStorage.getItem("data"));
+  if (storedData && storedData.length > 0) {
+    var totalQuantity = storedData.reduce(
+      (total, item) => total + (item.count || 1),
+      0
+    );
+    counter.innerHTML = totalQuantity;
   } else {
     counter.innerHTML = "";
   }
