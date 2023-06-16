@@ -1,5 +1,10 @@
 import React from "react";
 import Project from "./Project";
+import img2 from "./images/house2.jpg";
+import img3 from "./images/house3.jpg";
+import img4 from "./images/house4.jpg";
+import img5 from "./images/house5.jpg";
+
 const Projects = () => {
   return (
     <>
@@ -9,16 +14,16 @@ const Projects = () => {
         </h3>
       </div>
       <div className="px-2 project-row">
-        <Project />
-        <Project />
-        <Project />
-        <Project />
+        <Project img={img5} title="Summer House" />
+        <Project img={img2} title="Brick House" />
+        <Project img={img3} title="Renovated" />
+        <Project img={img4} title="Barn House" />
       </div>
       <div className="px-2 project-row">
-        <Project />
-        <Project />
-        <Project />
-        <Project />
+        <Project img={img2} title="Summer House" />
+        <Project img={img5} title="Brick House" />
+        <Project img={img4} title="Renovated" />
+        <Project img={img3} title="Barn House" />
       </div>
     </>
   );
