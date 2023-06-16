@@ -17,3 +17,10 @@ nav {
   font-weight: 400;
   margin: 10px 0;
 }
+
+.project-row::before,
+.project-row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
