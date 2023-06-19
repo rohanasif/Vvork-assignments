@@ -5,7 +5,7 @@ import Contact from "./Contact";
 
 const Main = () => {
   return (
-    <div class="max-w-[1564px] py-2 px-4 mx-auto">
+    <div className="max-w-[1564px] py-2 px-4 mx-auto">
       <Projects />
       <About />
       <Contact />

@@ -24,3 +24,14 @@ nav {
   display: table;
   clear: both;
 }
+
+.contact-row::before,
+.contact-row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contact-btn:hover {
+  background-color: #ccc !important;
+}
