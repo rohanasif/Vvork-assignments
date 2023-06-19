@@ -35,3 +35,7 @@ nav {
 .contact-btn:hover {
   background-color: #ccc !important;
 }
+
+.w3-border {
+  border: 1px solid #ccc;
+}

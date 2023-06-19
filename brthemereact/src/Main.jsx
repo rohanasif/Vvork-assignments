@@ -2,6 +2,7 @@ import React from "react";
 import Projects from "./Projects.jsx";
 import About from "./About";
 import Contact from "./Contact";
+import MapSection from "./MapSection.jsx";
 
 const Main = () => {
   return (
@@ -9,6 +10,7 @@ const Main = () => {
       <Projects />
       <About />
       <Contact />
+      <MapSection />
     </div>
   );
 };
