@@ -32,14 +32,18 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  gap: 40px;
+}
+
+h1 {
+  margin-top: 40px;
 }
 
 .main-text {
   color: #1f1f1f;
 }
 
-.services {
+.second {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -56,6 +60,7 @@ nav {
   width: 25%;
   height: 40vh;
   border-radius: 40px;
+  padding: 40px;
 }
 
 .card i {
@@ -64,4 +69,23 @@ nav {
 
 .card p {
   font-size: 24px;
+  text-align: center;
+}
+
+.form {
+  border-radius: 40px;
+  padding: 40px;
+  background-color: #fff;
+  flex-direction: column;
+  width: fit-content;
+}
+
+input,
+button {
+  padding: 20px;
+  border-radius: 999px;
+  width: 250px;
+  height: 60px;
+  border: 1px solid grey;
+  cursor: pointer;
 }

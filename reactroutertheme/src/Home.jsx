@@ -7,7 +7,7 @@ const Home = () => {
       <h3 className="main-text">
         Technologies: HTML5, CSS3, JavaScript, TailwindCSS and React
       </h3>
-      <div className="services">
+      <div className="second">
         <div className="card">
           <i className="fa-solid fa-pen-nib"></i>
           <p>UI/UX DESIGN</p>
