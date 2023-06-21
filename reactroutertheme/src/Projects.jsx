@@ -17,7 +17,7 @@ const Projects = () => {
             <img src={img2} alt="" className="project-img" />
             <p>Javascript Project</p>
           </div>
-          <div>
+          <div className="project">
             <img src={img3} alt="" className="project-img" />
             <p>React Project</p>
           </div>
