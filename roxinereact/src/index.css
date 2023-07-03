@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  padding: 0;
+  margin: 0;
+}
+.header-bg {
+  height: 100vh;
+  background: url("./images/big-14.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
